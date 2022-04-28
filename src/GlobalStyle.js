@@ -48,5 +48,8 @@ const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  &:root{
+    font-size: 16px;
+  }
 `
 export default GlobalStyle;
