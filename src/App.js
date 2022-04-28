@@ -1,10 +1,11 @@
 import React from 'react';
+import GlobalStyle from './GlobalStyle';
 
 function App() {
   return (
-    <div>
-      Portfolio
-    </div>
+    <>
+      <GlobalStyle/>
+    </>
   );
 }
 
