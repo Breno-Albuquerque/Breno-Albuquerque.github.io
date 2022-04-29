@@ -7,11 +7,17 @@ const Container = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  position: fixed;
+
   box-sizing: border-box;
-  padding: 8px;
+  padding: 16px;
 
   background-color: ${props => props.theme.black};
+  box-shadow: 0px 4px 4px 0px ${props => props.theme.purple1};
 
+  z-index: 9;
+
+  width: 100%;
   height: 10vh;
 `
 

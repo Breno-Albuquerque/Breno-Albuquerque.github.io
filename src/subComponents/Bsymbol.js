@@ -5,6 +5,8 @@ const Symbol = styled.div`
   font-family: 'Indie Flower', cursive;
   font-size: 3rem;
 
+  margin-top: 4px;
+
   color: ${props => props.theme.purple1};
 `
 
