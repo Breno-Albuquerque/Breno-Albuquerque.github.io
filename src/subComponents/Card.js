@@ -45,7 +45,7 @@ const Anchor = styled.a`
   font-size: 18px;
 `
 
-const CardTitle = styled.h2`
+const CardTitle = styled.h4`
   width: 100%;
   font-size: 20px;
 `

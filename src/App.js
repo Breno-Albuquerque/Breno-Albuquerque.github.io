@@ -7,6 +7,7 @@ import Home from './components/Home';
 import About from './components/About';
 import styled from 'styled-components';
 import Work from './components/Work';
+import Contact from './components/Contact';
 
 const ContentContainer = styled.div`
 /*   max-width: ; */
@@ -27,6 +28,7 @@ function App() {
           <Home />
           <About />
           <Work />
+          <Contact />
         </ContentContainer>
       </ThemeProvider>
     </>

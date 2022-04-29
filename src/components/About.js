@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import myPicture2 from '../images/myPicture2.png';
 
 const Container = styled.section`
-  font-family: 'Poppins', sans-serif;
-
   display: flex;
   flex-direction: column;
 
