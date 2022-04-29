@@ -9,16 +9,11 @@ const Section = styled.section`
 
   font-family: 'Poppins', sans-serif;
 
-  min-height: 90vh;
+  min-height: 100vh;
   width: 100%;
-
-  position: absolute;
-  top: 10vh;
 
   box-sizing: border-box;
   padding: 16px;
-
-  background-color: ${props => props.theme.black};
 `
 
 const Container = styled.div`

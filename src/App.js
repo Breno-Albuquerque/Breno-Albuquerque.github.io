@@ -4,19 +4,29 @@ import { ThemeProvider } from 'styled-components';
 import {theme} from './Theme';
 import Header from './components/Header';
 import Home from './components/Home';
-/* import styled from 'styled-components';
+import About from './components/About';
+import styled from 'styled-components';
+import Work from './components/Work';
 
 const ContentContainer = styled.div`
-  background-color: ;
-` */
+/*   max-width: ; */
+
+  box-sizing: border-box;
+  
+  background-color: ${props => props.theme.black};
+`
 
 function App() {
   return (
     <>
       <GlobalStyle/>
       <ThemeProvider theme={theme}>
-        <Header/>
-        <Home />
+        <ContentContainer>
+          <Header/>
+          <Home />
+          <About />
+          <Work />
+        </ContentContainer>
       </ThemeProvider>
     </>
   );
