@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Bsymbol from '../subComponents/Bsymbol';
+import Menu from './Menu';
 
 const Container = styled.header`
   display: flex;
@@ -75,6 +76,8 @@ function Header() {
         <MenuLine wasClicked={ wasClicked } position={'middle'}/>
         <MenuLine wasClicked={ wasClicked } position={'bottom'}/>
       </MenuBox>
+
+      <Menu wasClicked={ wasClicked } />
 
       <Bsymbol/>
     </Container>
