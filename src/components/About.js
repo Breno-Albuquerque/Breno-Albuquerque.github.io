@@ -59,7 +59,7 @@ const List = styled.ul`
   flex-direction: column;
   flex-wrap: wrap;
 
-  height: 160px;
+  height: 152px;
 `
 
 const ListItem = styled.li`

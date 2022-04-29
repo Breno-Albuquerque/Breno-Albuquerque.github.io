@@ -20,6 +20,17 @@ const Title = styled.h2`
   text-align: center;
 `
 
+const Footer = styled.footer`
+  color: ${props => props.theme.white};
+  font-size: 14px;
+
+  margin-top: 48px;
+  margin-bottom: 8px;
+
+  width: 100%;
+  text-align: center;
+`
+
 function Contact() {
   return (
     <Container>
@@ -27,6 +38,7 @@ function Contact() {
       { contacts.map((data) => (
         <ContactCard data={ data } />
       )) }
+      <Footer>Designed & Built by Breno Albuquerque. </Footer>
     </Container>
   )
 }
