@@ -72,7 +72,8 @@ const Tags = styled.p`
 `
 
 const Github = styled.a`
-
+  display: flex;
+  align-items: flex-end;
 `
 
 function Card(props) {

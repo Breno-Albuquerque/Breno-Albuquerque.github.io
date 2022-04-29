@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import ContactCard from '../subComponents/ContactCard';
+import { contacts } from '../data/contacts';
 
 const Container = styled.section`
   box-sizing: border-box;
@@ -13,6 +15,8 @@ const Title = styled.h2`
 
   width: 100%;
 
+  margin-bottom: 32px;
+
   text-align: center;
 `
 
@@ -20,6 +24,9 @@ function Contact() {
   return (
     <Container>
       <Title>Get In Touch</Title>
+      { contacts.map((data) => (
+        <ContactCard data={ data } />
+      )) }
     </Container>
   )
 }
