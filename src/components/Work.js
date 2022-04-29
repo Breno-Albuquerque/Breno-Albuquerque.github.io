@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import Card from '../subComponents/Card';
+import { projects } from '../data/projects';
 
 const Container = styled.section`
   font-family: 'Poppins', sans-serif;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   box-sizing: border-box;
   padding: 16px;
@@ -17,6 +20,8 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  margin-bottom: 32px;
 `
 
 const Title = styled.h3`
@@ -31,6 +36,11 @@ const Line = styled.span`
   height: 1px;
 `
 
+const WorkList = styled.ul`
+  display: flex;
+  flex-direction: column;
+`
+
 function Work() {
   return (
     <Container>
@@ -38,6 +48,11 @@ function Work() {
         <Title>My Work</Title>
         <Line />
       </Box>
+      <WorkList>
+        { projects.map((project) => (
+          <Card project={ project } />
+        )) }
+      </WorkList>
     </Container>
   )
 }

@@ -14,6 +14,7 @@ const ContentContainer = styled.div`
   box-sizing: border-box;
   
   background-color: ${props => props.theme.black};
+  font-family: 'Poppins', sans-serif;
 `
 
 function App() {

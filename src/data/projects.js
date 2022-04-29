@@ -23,20 +23,4 @@ export const projects = [
     techs: ['#React', '#Redux', '#Css'],
     repository: 'https://github.com/breno-albuquerque/trivia-game'
   },
-  {
-    id: 4,
-    name: "Memory Game",
-    description: "A simple memory game",
-    link: "#",
-    techs: ['#React', '#Redux', '#Css'],
-    repository: '#'
-  },
-  {
-    id: 5,
-    name: "Nutrients",
-    description: "A app to calculate and save your diet",
-    link: "#",
-    techs: ['#React', '#Redux', '#Css'],
-    repository: '#'
-  }
 ]
