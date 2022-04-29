@@ -34,6 +34,7 @@ const AnchorText = styled.a`
 
 const AnchorArrow = styled.a`
   font-family: "Material Icons";
+  font-size: 20px;
 `
 
 function ContactCard({ data }) {
