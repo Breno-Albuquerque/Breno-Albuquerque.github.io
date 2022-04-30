@@ -13,6 +13,10 @@ const Container = styled.section`
   @media(min-width: 576px) {
     padding: 32px;
   }
+  
+  @media(min-width: 992px) {
+    min-height: 80vh;
+  }
 `
 
 const Box = styled.div`

@@ -10,6 +10,14 @@ const Container = styled.section`
   @media(min-width: 576px) {
     padding: 32px;
   }
+
+  @media(min-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    min-height: 60vh;
+  }
 `
 
 const Title = styled.h2`

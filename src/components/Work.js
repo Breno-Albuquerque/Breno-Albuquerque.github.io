@@ -16,6 +16,10 @@ const Container = styled.section`
   @media(min-width: 576px) {
     padding: 32px;
   }
+
+  @media(min-width: 992px) {
+    min-height: 60vh;
+  }
 `
 
 const Box = styled.div`
@@ -34,6 +38,7 @@ const Title = styled.h3`
 
   @media(min-width: 992px) {
     font-size: 24px;
+    margin-bottom: 32px;
   }
 `
 
@@ -55,6 +60,12 @@ const Line = styled.span`
 const WorkList = styled.ul`
   display: flex;
   flex-direction: column;
+
+  @media(min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 `
 
 function Work() {
