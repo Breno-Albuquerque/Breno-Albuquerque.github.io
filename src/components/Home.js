@@ -27,6 +27,10 @@ const Title = styled.h1`
   line-height: 40px;
 
   color: ${props => props.theme.purple1};
+
+  @media(min-width: 576px) {
+    font-size: 40px;
+  }
 `
 
 const Name = styled.span`
