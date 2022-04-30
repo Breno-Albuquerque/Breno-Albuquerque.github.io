@@ -26,6 +26,10 @@ const Box = styled.div`
 const Title = styled.h3`
   font-size: 22px;
   color: ${props => props.theme.purple1};
+
+  @media(min-width: 992px) {
+    font-size: 24px;
+  }
 `
 
 const Line = styled.span`
@@ -37,6 +41,10 @@ const Line = styled.span`
 
   @media(min-width: 576px) {
     width: 75%;
+  }
+
+  @media(min-width: 992px) {
+    display: none;
   }
 `
 
