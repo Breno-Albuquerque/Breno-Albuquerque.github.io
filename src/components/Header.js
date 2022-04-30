@@ -22,6 +22,7 @@ const Container = styled.header`
 
   @media(min-width: 992px) {
     height: 80px;
+    box-shadow: none;
   }
 `
 
