@@ -23,10 +23,11 @@ const Container = styled.header`
 `
 
 const Nav = styled.nav`
+  display: none;
   width: 60%;
 
-  @media(max-width: 768px) {
-    display: none;
+  @media(min-width: 768px) {
+    display: block;
   }
 `
 
