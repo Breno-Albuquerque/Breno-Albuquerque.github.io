@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   position: absolute;
   top: 0;
-  left: ${props => props.wasClicked ? '0' : '-85%'};
+  right: ${props => props.wasClicked ? '0' : '-85%'};
 
   box-sizing: border-box;
   padding: 16px;
@@ -57,6 +57,7 @@ function Menu({ wasClicked }) {
     <Container wasClicked={ wasClicked } >
       <Nav>
         <List>
+          <Li><Arrow>chevron_right</Arrow> Home</Li>
           <Li><Arrow>chevron_right</Arrow> About</Li>
           <Li><Arrow>chevron_right</Arrow> Work</Li>
           <Li><Arrow>chevron_right</Arrow> Contact</Li>

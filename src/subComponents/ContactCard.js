@@ -51,4 +51,4 @@ function ContactCard({ data }) {
   )
 }
 
-export default ContactCard
+export default ContactCard;

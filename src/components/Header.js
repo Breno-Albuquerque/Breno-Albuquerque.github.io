@@ -22,6 +22,27 @@ const Container = styled.header`
   height: 10vh;
 `
 
+const Nav = styled.nav`
+  width: 60%;
+
+  @media(max-width: 768px) {
+    display: none;
+  }
+`
+
+const NavOl = styled.ol`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+`
+
+const NavLi = styled.li`
+  color: ${props => props.theme.white};
+  font-weight: 900;
+`
+
 const MenuBox = styled.button`
   position: relative;
   height: 24px;
@@ -33,6 +54,10 @@ const MenuBox = styled.button`
 
   border: none;
   background: none;
+
+  @media(min-width: 768px) {
+    display: none;
+  }
 `
 
 const MenuLine = styled.span`
@@ -70,6 +95,7 @@ function Header() {
 
   return (
     <Container>
+      <Bsymbol/>
 
       <MenuBox onClick={ handleMenuClick }>
         <MenuLine wasClicked={ wasClicked } position={'top'} />
@@ -77,9 +103,18 @@ function Header() {
         <MenuLine wasClicked={ wasClicked } position={'bottom'}/>
       </MenuBox>
 
+      <Nav>
+        <NavOl>
+          <NavLi>Home</NavLi>
+          <NavLi>About</NavLi>
+          <NavLi>Work</NavLi>
+          <NavLi>Contact</NavLi>
+        </NavOl>
+      </Nav>
+
       <Menu wasClicked={ wasClicked } />
 
-      <Bsymbol/>
+
     </Container>
   )
 }
