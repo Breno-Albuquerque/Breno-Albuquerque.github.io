@@ -8,6 +8,11 @@ const Container = styled.section`
 
   box-sizing: border-box;
   padding: 16px;
+
+
+  @media(min-width: 576px) {
+    padding: 32px;
+  }
 `
 
 const Box = styled.div`
@@ -83,9 +88,6 @@ const List = styled.ul`
   flex-wrap: wrap;
 
   max-height: 160px;
-/*   @media(min-width: 576px) {
-    max-height: 160px;
-  } */
 `
 
 const ListItem = styled.li`
