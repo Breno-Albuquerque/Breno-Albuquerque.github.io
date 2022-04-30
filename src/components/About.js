@@ -22,9 +22,9 @@ const Box = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media(min-width: 576px) {
+/*   @media(min-width: 576px) {
     justify-content: space-evenly;
-  }
+  } */
 `
 
 const Title = styled.h3`
