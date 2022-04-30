@@ -17,6 +17,11 @@ const Section = styled.section`
 `
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
 `
 
 const Title = styled.h1`
@@ -40,10 +45,11 @@ const Name = styled.span`
 const Introduction = styled.article`
   align-self: flex-start;
 
-  font-size: 14px;
+  font-size: 15px;
   line-height: 24px;
 
   width: 95%;
+  max-width: 576px;
 
   color: ${props => props.theme.white};
 `
@@ -52,18 +58,43 @@ const Highlight = styled.span`
   color: ${props => props.theme.purple1};
 `
 
-const HelloBtn = styled.button`
-  width: 160px;
-  height: 56px;
+const ButtonsBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`
 
-  font-size: 18px;
+const HelloButton = styled.button`
+  width: 144px;
+  height: 48px;
+
+  font-size: 16px;
   font-weight: 900;
   color: ${props => props.theme.purple1};
 
   border: 1px solid ${props => props.theme.purple1};
   border-radius: 0 50px 0 50px;
+  margin-right: 16px;
 
   background: none;
+
+  @media(max-width: 335px) {
+    margin-bottom: 32px;
+  }
+`
+
+const ButtonCurriculum = styled.button`
+  width: 144px;
+  height: 48px;
+
+  font-size: 16px;
+  font-weight: 900;
+  color: ${props => props.theme.white};
+
+  border: 1px solid ${props => props.theme.purple1};
+  border-radius: 0 50px 0 50px;
+
+  background: ${props => props.theme.purple1};
 `
 
 function Home() {
@@ -71,14 +102,17 @@ function Home() {
     <Section>
       <Container>
         <Title>
-          Hi! I'm <Name>Breno Albuquerque</Name>, Web Developer
+          Hi! I'm <Name>Breno Albuquerque</Name>,<br/>Web Developer
         </Title>
         <Introduction>
         I'm a <Highlight>Front-End Web Developer</Highlight> specialized in React applications. Currently 
         I'm coursing the Back-End module of <Highlight>Trybe</Highlight> to became Full Stack.
         </Introduction>
       </Container>
-      <HelloBtn>Say Hello !</HelloBtn>
+      <ButtonsBox>
+        <HelloButton>Say Hello !</HelloButton>
+        <ButtonCurriculum>Curriculum</ButtonCurriculum>
+      </ButtonsBox>
     </Section>
   )
 }
