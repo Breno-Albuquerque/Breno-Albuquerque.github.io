@@ -12,6 +12,10 @@ const Container = styled.section`
 
   box-sizing: border-box;
   padding: 16px;
+
+  @media(min-width: 576px) {
+    padding: 32px;
+  }
 `
 
 const Box = styled.div`
@@ -34,6 +38,10 @@ const Line = styled.span`
 
   width: 65%;
   height: 1px;
+
+  @media(min-width: 576px) {
+    width: 75%;
+  }
 `
 
 const WorkList = styled.ul`

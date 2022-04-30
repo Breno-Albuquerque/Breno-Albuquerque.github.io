@@ -21,10 +21,6 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-/*   @media(min-width: 576px) {
-    justify-content: space-evenly;
-  } */
 `
 
 const Title = styled.h3`

@@ -39,6 +39,7 @@ const Title = styled.h1`
 
   @media(min-width: 576px) {
     font-size: 40px;
+    line-height: 48px;
   }
 `
 
