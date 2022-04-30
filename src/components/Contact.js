@@ -6,6 +6,10 @@ import { contacts } from '../data/contacts';
 const Container = styled.section`
   box-sizing: border-box;
   padding: 16px;
+
+  @media(min-width: 576px) {
+    padding: 32px;
+  }
 `
 
 const Title = styled.h2`
@@ -18,6 +22,10 @@ const Title = styled.h2`
   margin-bottom: 32px;
 
   text-align: center;
+
+  @media(min-width: 576px) {
+    font-size: 26px;
+  }
 `
 
 const Footer = styled.footer`

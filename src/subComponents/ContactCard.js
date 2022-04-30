@@ -7,10 +7,12 @@ const Container = styled.div`
   align-items: center;
 
   width: 100%;
+  max-width: 400px;
 
   box-sizing: border-box;
   padding: 8px 16px;
 
+  margin: 0 auto;
   margin-bottom: 16px;
 
   background-color: ${props => props.theme.purple2};

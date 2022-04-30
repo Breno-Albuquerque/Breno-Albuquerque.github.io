@@ -74,7 +74,7 @@ const ListContainer = styled.div`
   margin: 32px auto;
 
   @media(min-width: 576px) {
-    max-width: 60%;
+    max-width: 80%;
   }
 `
 
