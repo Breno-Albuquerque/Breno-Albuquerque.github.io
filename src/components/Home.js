@@ -52,6 +52,10 @@ const Introduction = styled.article`
   max-width: 576px;
 
   color: ${props => props.theme.white};
+
+  @media(min-width: 576px) {
+    font-size: 16px;
+  }
 `
 
 const Highlight = styled.span`

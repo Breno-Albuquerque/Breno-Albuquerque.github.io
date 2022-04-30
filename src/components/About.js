@@ -16,6 +16,10 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media(min-width: 576px) {
+    justify-content: space-evenly;
+  }
 `
 
 const Title = styled.h3`
@@ -28,6 +32,11 @@ const Line = styled.span`
 
   width: 65%;
   height: 1px;
+
+
+  @media(min-width: 576px) {
+    width: 75%;
+  }
 `
 
 const Text = styled.p`
@@ -35,12 +44,17 @@ const Text = styled.p`
 
   margin: 32px 0;
   line-height: 24px;
+
+  @media(min-width: 576px) {
+    max-width: 60%;
+  }
+
 `
 
 const Picture = styled.img`
   width: 202px;
-
-  align-self: center;
+  
+  margin: 0 auto;
 `
 
 const SubTitle = styled.h4`
@@ -48,10 +62,19 @@ const SubTitle = styled.h4`
   color: ${props => props.theme.purple1};
 
   margin-bottom: 16px;
+
+  @media(min-width: 576px) {
+    font-size: 22px;
+  }
 `
 
 const ListContainer = styled.div`
-  margin: 32px 0;
+  width: 100%;
+  margin: 32px auto;
+
+  @media(min-width: 576px) {
+    max-width: 60%;
+  }
 `
 
 const List = styled.ul`
@@ -59,13 +82,15 @@ const List = styled.ul`
   flex-direction: column;
   flex-wrap: wrap;
 
-  height: 152px;
+  max-height: 160px;
+/*   @media(min-width: 576px) {
+    max-height: 160px;
+  } */
 `
 
 const ListItem = styled.li`
   font-size: 14px;
   color: ${props => props.theme.white};
-  
 
   margin: 16px 0;
 
@@ -77,10 +102,23 @@ const ListItem = styled.li`
     color: ${props => props.theme.purple1};
     font-family: "Material Icons";
   }
+
+  @media(min-width: 576px) {
+    font-size: 16px;
+  }
 `
 
 const Highlight = styled.span`
   color: ${props => props.theme.purple1};
+`
+
+const SubContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-top: 16px;
+  width: 100%;
 `
 
 function About() {
@@ -90,10 +128,12 @@ function About() {
         <Title>About Me</Title>
         <Line/>
       </Box>
-      <Text>
-        Apaixonado por desenvolvimento de softwares, novas tecnologias e computação de forma geral. Atualmente estudo <Highlight>Desenvolvimento Web Full Stack</Highlight> na <Highlight>Trybe</Highlight>. Curiosidade e disposição para novos aprendizados me definem, sempre busco novos conhecimentos no mundo da tecnologia para poder aplicá-los e impactar positivamente a vida das pessoas.
-      </Text>
-      <Picture src={ myPicture2 } alt="Profile Picture"/>
+      <SubContainer>
+        <Text>
+          Apaixonado por desenvolvimento de softwares, novas tecnologias e computação de forma geral. Atualmente estudo <Highlight>Desenvolvimento Web Full Stack</Highlight> na <Highlight>Trybe</Highlight>. Curiosidade e disposição para novos aprendizados me definem, sempre busco novos conhecimentos no mundo da tecnologia para poder aplicá-los e impactar positivamente a vida das pessoas.
+        </Text>
+        <Picture src={ myPicture2 } alt="Profile Picture"/>
+      </SubContainer>
 
       <ListContainer>
         <SubTitle>#Tech Stack</SubTitle>
