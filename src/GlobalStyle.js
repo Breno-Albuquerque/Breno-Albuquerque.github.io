@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
   }
   &:root{
     font-size: 16px;
+    background-color: #010104;
   }
 `
 export default GlobalStyle;

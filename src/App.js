@@ -9,13 +9,15 @@ import styled from 'styled-components';
 import Work from './components/Work';
 import Contact from './components/Contact';
 
-const ContentContainer = styled.div`
-/*   max-width: ; */
 
+const ContentContainer = styled.div`
   box-sizing: border-box;
   
   background-color: ${props => props.theme.black};
   font-family: 'Poppins', sans-serif;
+
+  max-width: 992px;
+  margin: 0 auto;
 `
 
 function App() {
@@ -23,13 +25,13 @@ function App() {
     <>
       <GlobalStyle/>
       <ThemeProvider theme={theme}>
-        <ContentContainer>
           <Header/>
-          <Home />
-          <About />
-          <Work />
-          <Contact />
-        </ContentContainer>
+          <ContentContainer>
+            <Home />
+            <About />
+            <Work />
+            <Contact />
+          </ContentContainer>
       </ThemeProvider>
     </>
   );

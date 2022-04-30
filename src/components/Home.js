@@ -71,6 +71,10 @@ const ButtonsBox = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media(min-width: 992px) {
+    align-self: flex-start;
+  }
 `
 
 const HelloButton = styled.button`

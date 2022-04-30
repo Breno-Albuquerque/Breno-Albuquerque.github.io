@@ -6,20 +6,37 @@ import Menu from './Menu';
 const Container = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
+  font-family: 'Poppins', sans-serif;
   position: fixed;
 
   box-sizing: border-box;
-  padding: 16px;
 
   background-color: ${props => props.theme.black};
-  box-shadow: 0px 4px 4px 0px ${props => props.theme.purple1};
+  box-shadow: 0px 2px 8px 0px ${props => props.theme.purple1};
 
   z-index: 9;
 
   width: 100%;
   height: 10vh;
+
+  @media(min-width: 992px) {
+    height: 80px;
+  }
+`
+
+const SubContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  padding: 16px;
+
+  width: 100%;
+  max-width: 992px;
+
+  margin: 0 auto;
 `
 
 const Nav = styled.nav`
@@ -96,26 +113,26 @@ function Header() {
 
   return (
     <Container>
-      <Bsymbol/>
+      <SubContainer>
+        <Bsymbol/>
 
-      <MenuBox onClick={ handleMenuClick }>
-        <MenuLine wasClicked={ wasClicked } position={'top'} />
-        <MenuLine wasClicked={ wasClicked } position={'middle'}/>
-        <MenuLine wasClicked={ wasClicked } position={'bottom'}/>
-      </MenuBox>
+        <MenuBox onClick={ handleMenuClick }>
+          <MenuLine wasClicked={ wasClicked } position={'top'} />
+          <MenuLine wasClicked={ wasClicked } position={'middle'}/>
+          <MenuLine wasClicked={ wasClicked } position={'bottom'}/>
+        </MenuBox>
 
-      <Nav>
-        <NavOl>
-          <NavLi>Home</NavLi>
-          <NavLi>About</NavLi>
-          <NavLi>Work</NavLi>
-          <NavLi>Contact</NavLi>
-        </NavOl>
-      </Nav>
+        <Nav>
+          <NavOl>
+            <NavLi>Home</NavLi>
+            <NavLi>About</NavLi>
+            <NavLi>Work</NavLi>
+            <NavLi>Contact</NavLi>
+          </NavOl>
+        </Nav>
 
-      <Menu wasClicked={ wasClicked } />
-
-
+        <Menu wasClicked={ wasClicked } />
+      </SubContainer>
     </Container>
   )
 }
