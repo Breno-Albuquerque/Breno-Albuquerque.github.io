@@ -100,13 +100,22 @@ const SubContainer = styled.div`
 const SvgsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   width: 90%;
   max-width: 300px;
 
   margin: 16px auto;
+
+  @media(min-width: 768px) {
+    max-width: 576px;
+  }
+
+  @media(min-width: 992px) {
+    max-width: 100%;
+  }
 `
 
 const SvgBox = styled.div`
@@ -122,12 +131,16 @@ const SvgBox = styled.div`
 
   margin-bottom: 16px;
 
-  box-shadow: 4px 4px 4px  ${props => props.theme.purple2};
+  box-shadow: 2px 2px 2px  ${props => props.theme.purple2};
 
   box-sizing: border-box;
   padding: 8px;
 
   border: 1px solid ${props => props.theme.purple2};
+
+  @media(min-width: 768px) {
+    margin-right: 32px;
+  }
 `
 
 const SvgName = styled.span`
@@ -191,10 +204,10 @@ function About() {
         <Sql width={ 50 } />
         <SvgName>MySQL</SvgName>
       </SvgBox>
-      <SvgBox>
+{/*       <SvgBox>
         <Ts width={ 50 } />
         <SvgName>TypeScript</SvgName>
-      </SvgBox>
+      </SvgBox> */}
     </SvgsContainer>
 
     </Container>
