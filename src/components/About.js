@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components';
 import myPicture2 from '../images/myPicture2.png';
 
+import { Css, Docker, Git, Html, Jest, Js, Node, ReactSvg, Redux, Sql, Ts } from '../images/techstack/AllSvgs';
+
+
 const Container = styled.section`
   display: flex;
   flex-direction: column;
@@ -13,7 +16,7 @@ const Container = styled.section`
   @media(min-width: 576px) {
     padding: 32px;
   }
-  
+
   @media(min-width: 992px) {
     min-height: 80vh;
   }
@@ -144,6 +147,19 @@ function About() {
         </Text>
         <Picture src={ myPicture2 } alt="Profile Picture"/>
       </SubContainer>
+
+      <Css />
+      <Docker />
+      <Git />
+      <Html />
+      <Jest />
+      <Js />
+      <Node />
+      <ReactSvg />
+      <Redux />
+      <Sql />
+      <Ts />
+
 
       <ListContainer>
         <SubTitle>#Tech Stack</SubTitle>
