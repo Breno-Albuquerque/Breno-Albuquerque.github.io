@@ -84,43 +84,6 @@ const SubTitle = styled.h4`
   }
 `
 
-/* const ListContainer = styled.div`
-  width: 100%;
-  margin: 32px auto;
-
-  @media(min-width: 576px) {
-    max-width: 80%;
-  }
-`
-
-const List = styled.ul`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  max-height: 160px;
-`
-
-const ListItem = styled.li`
-  font-size: 14px;
-  color: ${props => props.theme.white};
-
-  margin: 16px 0;
-
-  &::before{
-    content: "chevron_right ";
-
-    margin-right: 4px;
-
-    color: ${props => props.theme.purple1};
-    font-family: "Material Icons";
-  }
-
-  @media(min-width: 576px) {
-    font-size: 16px;
-  }
-` */
-
 const Highlight = styled.span`
   color: ${props => props.theme.purple1};
 `
