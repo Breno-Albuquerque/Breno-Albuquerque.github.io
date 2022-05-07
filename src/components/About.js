@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import myPicture2 from '../images/myPicture2.png';
 
-import { Css, Docker, Git, Html, Jest, Js, Node, ReactSvg, Redux, Sql, Ts } from '../images/techstack/AllSvgs';
-
 
 const Container = styled.section`
   display: flex;
@@ -24,6 +22,7 @@ const Container = styled.section`
 
 const Box = styled.div`
   width: 100%;
+  margin-bottom: 32px;
 
   display: flex;
   align-items: center;
@@ -58,30 +57,14 @@ const Line = styled.span`
 const Text = styled.p`
   color: ${props => props.theme.white};
 
-  margin: 32px 0;
+  margin-bottom: 32px;
   line-height: 24px;
-
-  @media(min-width: 576px) {
-    max-width: 60%;
-  }
-
 `
 
 const Picture = styled.img`
   width: 202px;
   
-  margin: 0 auto;
-`
-
-const SubTitle = styled.h4`
-  font-size: 20px;
-  color: ${props => props.theme.purple1};
-
-  margin: 32px 0;
-
-  @media(min-width: 576px) {
-    font-size: 22px;
-  }
+  margin: 32px auto;
 `
 
 const Highlight = styled.span`
@@ -95,58 +78,23 @@ const SubContainer = styled.div`
 
   margin-top: 16px;
   width: 100%;
-`
 
-const SvgsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  
-  align-items: center;
-  justify-content: space-around;
-
-  width: 90%;
-  max-width: 300px;
-
-  margin: 16px auto;
-
-  @media(min-width: 768px) {
-    max-width: 576px;
-  }
-
-  @media(min-width: 992px) {
-    max-width: 100%;
+  @media(min-width: 576px) {
+    max-width: 60%;
   }
 `
 
-const SvgBox = styled.div`
+const ImgTextBox = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
 
-  border-radius: 0 50px 0 50px;
-
-  width: 130px;
-  height: 130px;
-
-  margin-bottom: 16px;
-
-  box-shadow: 2px 2px 2px  ${props => props.theme.purple2};
-
-  box-sizing: border-box;
-  padding: 8px;
-
-  border: 1px solid ${props => props.theme.purple2};
-
-  @media(min-width: 768px) {
-    margin-right: 32px;
+  @media(min-width: 576px) {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
   }
 `
 
-const SvgName = styled.span`
-  font-size: 14px;
-  color: ${props => props.theme.white};
-`
 
 function About() {
   return (
@@ -155,61 +103,21 @@ function About() {
         <Title>About Me</Title>
         <Line/>
       </Box>
-      <SubContainer>
-        <Text>
-          Apaixonado por desenvolvimento de softwares, novas tecnologias e computação de forma geral. Atualmente estudo <Highlight>Desenvolvimento Web Full Stack</Highlight> na <Highlight>Trybe</Highlight>. Curiosidade e disposição para novos aprendizados me definem, sempre busco novos conhecimentos no mundo da tecnologia para poder aplicá-los e impactar positivamente a vida das pessoas.
-        </Text>
+      <ImgTextBox>
+        <SubContainer>   
+          <Text>
+          <Highlight>Hello!</Highlight> My name is <Highlight>Breno</Highlight> and I enojoy creating different types of applications.
+          </Text>
+          <Text>
+          I'm always interested in new technologies with distinct tools and resorces that can increase the <Highlight>quality</Highlight> and the <Highlight>speed</Highlight> of my <Highlight>programming</Highlight> and <Highlight>developing skills.</Highlight>
+          </Text>
+          <Text>
+          I'm currently a <Highlight>full stack developer student</Highlight> at <Highlight>Trybe</Highlight>, I have already conclued the Front-End module of the course and my specialization is building web pages with JavaScript, HTML, CSS, React and Redux.
+          </Text>
+          
+        </SubContainer>
         <Picture src={ myPicture2 } alt="Profile Picture"/>
-      </SubContainer>
-
-      <SubTitle>#Tech Stack</SubTitle>
-    <SvgsContainer>
-      <SvgBox> 
-        <Css width={ 50 } />
-        <SvgName>Css</SvgName>
-      </SvgBox>
-      <SvgBox>
-        <Docker width={ 50 } />
-        <SvgName>Docker</SvgName>
-      </SvgBox>
-      <SvgBox>
-        <Git width={ 50 } />
-        <SvgName>Git</SvgName>
-      </SvgBox>
-      <SvgBox>
-        <Html width={ 50 } />
-        <SvgName>HTML</SvgName>
-      </SvgBox>
-      <SvgBox>
-        <Jest width={ 50 } />
-        <SvgName>Jest</SvgName>
-      </SvgBox>
-      <SvgBox>
-        <Js width={ 50 } />
-        <SvgName>JavaScript</SvgName>
-      </SvgBox>
-      <SvgBox>
-        <Node width={ 50 } />
-        <SvgName>Node.js</SvgName>
-      </SvgBox>
-      <SvgBox>
-        <ReactSvg width={ 50 } />
-        <SvgName>React</SvgName>
-      </SvgBox>
-      <SvgBox>
-        <Redux width={ 50 } />
-        <SvgName>Redux</SvgName>
-      </SvgBox>
-      <SvgBox>
-        <Sql width={ 50 } />
-        <SvgName>MySQL</SvgName>
-      </SvgBox>
-{/*       <SvgBox>
-        <Ts width={ 50 } />
-        <SvgName>TypeScript</SvgName>
-      </SvgBox> */}
-    </SvgsContainer>
-
+      </ImgTextBox>
     </Container>
   )
 }

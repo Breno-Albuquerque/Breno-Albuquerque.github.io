@@ -8,6 +8,7 @@ import About from './components/About';
 import styled from 'styled-components';
 import Work from './components/Work';
 import Contact from './components/Contact';
+import TechStack from './components/TechStack';
 
 
 const ContentContainer = styled.div`
@@ -29,6 +30,7 @@ function App() {
           <ContentContainer>
             <Home />
             <About />
+            <TechStack />
             <Work />
             <Contact />
           </ContentContainer>
