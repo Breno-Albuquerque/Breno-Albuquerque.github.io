@@ -119,7 +119,7 @@ const NavLi = styled.li`
 
 function Header() {
   const [wasClicked, setWasClicked] = useState(false);
-  const [isActive, setIsActive] = useState([false, false, false, false]);
+  const [isActive, setIsActive] = useState([false, false, false, false, false]);
 
   function handleMenuClick() {
     setWasClicked(!wasClicked)
@@ -148,17 +148,20 @@ function Header() {
 
         <Nav>
           <NavOl>
-            <NavLi n={0} isActive={ isActive }>
-              <Link onSetActive={ () => handleSetActive(0) } onSetInactive={ () => handleSetInactive(0) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="About">About</Link>
+          <NavLi n={0} isActive={ isActive }>
+              <Link onSetActive={ () => handleSetActive(0) } onSetInactive={ () => handleSetInactive(0) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="Home">Home</Link>
             </NavLi>
             <NavLi n={1} isActive={ isActive }>
-              <Link onSetActive={ () => handleSetActive(1) } onSetInactive={ () => handleSetInactive(1) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="TechStack">Tech Stack</Link>
+              <Link onSetActive={ () => handleSetActive(1) } onSetInactive={ () => handleSetInactive(1) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="About">About</Link>
             </NavLi>
             <NavLi n={2} isActive={ isActive }>
-              <Link onSetActive={ () => handleSetActive(2) } onSetInactive={ () => handleSetInactive(2) }  activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="Work">Work</Link>
+              <Link onSetActive={ () => handleSetActive(2) } onSetInactive={ () => handleSetInactive(2) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="TechStack">Tech Stack</Link>
             </NavLi>
             <NavLi n={3} isActive={ isActive }>
-              <Link onSetActive={ () => handleSetActive(3) } onSetInactive={ () => handleSetInactive(3) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="Contact">Contact</Link>
+              <Link onSetActive={ () => handleSetActive(3) } onSetInactive={ () => handleSetInactive(3) }  activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="Work">Work</Link>
+            </NavLi>
+            <NavLi n={4} isActive={ isActive }>
+              <Link onSetActive={ () => handleSetActive(4) } onSetInactive={ () => handleSetInactive(4) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="Contact">Contact</Link>
             </NavLi>
           </NavOl>
         </Nav>

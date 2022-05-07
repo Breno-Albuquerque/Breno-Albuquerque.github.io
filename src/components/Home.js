@@ -117,7 +117,7 @@ const ButtonCurriculum = styled.button`
 
 function Home() {
   return (
-    <Section>
+    <Section id="Home">
       <Container>
         <Title>
           Hi! I'm <Name>Breno Albuquerque</Name>,<br/>Web Developer
