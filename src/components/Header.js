@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Bsymbol from '../subComponents/Bsymbol';
 import Menu from './Menu';
+import { Link } from 'react-scroll';
 
 const Container = styled.header`
   display: flex;
@@ -125,10 +126,18 @@ function Header() {
 
         <Nav>
           <NavOl>
-            <NavLi>Home</NavLi>
-            <NavLi>About</NavLi>
-            <NavLi>Work</NavLi>
-            <NavLi>Contact</NavLi>
+            <NavLi>
+              <Link activeClass="active" spy={true} smooth={true} offset={-200} duration={500} to="About">About</Link>
+            </NavLi>
+            <NavLi>
+              <Link activeClass="active" spy={true} smooth={true} offset={-200} duration={500} to="TechStack">Tech Stack</Link>
+            </NavLi>
+            <NavLi>
+              <Link activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="Work">Work</Link>
+            </NavLi>
+            <NavLi>
+              <Link ctiveClass="active" spy={true} smooth={true} offset={-200} duration={500} to="Contact">Contact</Link>
+            </NavLi>
           </NavOl>
         </Nav>
 
