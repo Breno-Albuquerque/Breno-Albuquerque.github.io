@@ -34,6 +34,10 @@ const Title = styled.h2`
   @media(min-width: 576px) {
     font-size: 26px;
   }
+
+  @media(min-width: 992px) {
+    font-size: 36px;
+  }
 `
 
 const Footer = styled.footer`

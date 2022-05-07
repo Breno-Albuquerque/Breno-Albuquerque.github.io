@@ -16,7 +16,43 @@ const Container = styled.section`
   }
 
   @media(min-width: 992px) {
-    min-height: 80vh;
+    min-height: 60vh;
+    justify-content: center;
+  }
+`
+
+const Box = styled.div`
+  width: 100%;
+  margin-bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`
+
+const Title = styled.h3`
+  font-size: 22px;
+  color: ${props => props.theme.purple1};
+
+  @media(min-width: 992px) {
+    font-size: 32px;
+  }
+`
+
+const Line = styled.span`
+  background-color: ${props => props.theme.purple1};
+
+  flex-grow: 0.95;
+  height: 1px;
+  margin-left: 12px;
+
+  @media(min-width: 576px) {
+    flex-grow: 1;
+    margin-left: 16px;
+  }
+
+  @media(min-width: 992px) {
+    display: none;
   }
 `
 
@@ -71,21 +107,13 @@ const SvgName = styled.span`
   color: ${props => props.theme.white};
 `
 
-const SubTitle = styled.h4`
-  font-size: 20px;
-  color: ${props => props.theme.purple1};
-
-  margin: 32px 0;
-
-  @media(min-width: 576px) {
-    font-size: 22px;
-  }
-`
-
 function TechStack() {
   return (
     <Container>
-    <SubTitle>#Tech Stack</SubTitle>
+      <Box>
+        <Title>Tech Stack</Title>
+        <Line/>
+      </Box>
       <SvgsContainer>
         <SvgBox>
           <ReactSvg width={ 50 } />

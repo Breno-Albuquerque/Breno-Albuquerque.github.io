@@ -16,7 +16,8 @@ const Container = styled.section`
   }
 
   @media(min-width: 992px) {
-    min-height: 80vh;
+    min-height: 60vh;
+    justify-content: center;
   }
 `
 
@@ -26,7 +27,7 @@ const Box = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 `
 
 const Title = styled.h3`
@@ -34,19 +35,20 @@ const Title = styled.h3`
   color: ${props => props.theme.purple1};
 
   @media(min-width: 992px) {
-    font-size: 24px;
+    font-size: 32px;
   }
 `
 
 const Line = styled.span`
   background-color: ${props => props.theme.purple1};
 
-  width: 65%;
+  flex-grow: 0.95;
   height: 1px;
-
+  margin-left: 12px;
 
   @media(min-width: 576px) {
-    width: 75%;
+    flex-grow: 1;
+    margin-left: 16px;
   }
 
   @media(min-width: 992px) {
@@ -56,9 +58,15 @@ const Line = styled.span`
 
 const Text = styled.p`
   color: ${props => props.theme.white};
+  font-size: 16px;
 
   margin-bottom: 32px;
   line-height: 24px;
+
+  @media(min-width: 992px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 `
 
 const Picture = styled.img`
