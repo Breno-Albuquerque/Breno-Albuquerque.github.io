@@ -7,17 +7,11 @@ const Container = styled.section`
   box-sizing: border-box;
   padding: 16px;
 
-  @media(min-width: 576px) {
-    padding: 32px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-  @media(min-width: 992px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    min-height: 90vh;
-  }
+  min-height: 90vh;
 `
 
 const Title = styled.h2`
