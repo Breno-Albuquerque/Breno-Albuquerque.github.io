@@ -53,7 +53,7 @@ const Footer = styled.footer`
 
 function Contact() {
   return (
-    <Container>
+    <Container id="Contact">
       <Title>Get In Touch</Title>
       { contacts.map((data) => (
         <ContactCard data={ data } />

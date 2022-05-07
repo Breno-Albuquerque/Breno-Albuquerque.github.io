@@ -109,7 +109,7 @@ const SvgName = styled.span`
 
 function TechStack() {
   return (
-    <Container>
+    <Container id="TechStack">
       <Box>
         <Title>Tech Stack</Title>
         <Line/>

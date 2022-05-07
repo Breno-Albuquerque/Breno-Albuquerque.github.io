@@ -106,7 +106,7 @@ const ImgTextBox = styled.div`
 
 function About() {
   return (
-    <Container>
+    <Container id="About">
       <Box>
         <Title>About Me</Title>
         <Line/>

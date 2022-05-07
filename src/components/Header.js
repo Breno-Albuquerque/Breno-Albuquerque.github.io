@@ -132,7 +132,7 @@ function Header() {
           </NavOl>
         </Nav>
 
-        <Menu wasClicked={ wasClicked } />
+        <Menu handleMenuClick={ handleMenuClick } wasClicked={ wasClicked } />
       </SubContainer>
     </Container>
   )

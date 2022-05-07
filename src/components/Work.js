@@ -74,7 +74,7 @@ const WorkList = styled.ul`
 
 function Work() {
   return (
-    <Container>
+    <Container id="Work">
       <Box>
         <Title>My Work</Title>
         <Line />

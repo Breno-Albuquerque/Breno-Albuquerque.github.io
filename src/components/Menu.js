@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 const Container = styled.div`
   position: absolute;
@@ -18,6 +19,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+`
+
+const ScrollLink = styled(Link)`
+  display: flex;
   align-items: center;
 `
 
@@ -52,15 +58,35 @@ const Arrow = styled.span`
   margin-right: 8px;
 `
 
-function Menu({ wasClicked }) {
+function Menu({ wasClicked, handleMenuClick }) {
   return (
     <Container wasClicked={ wasClicked } >
       <Nav>
         <List>
-          <Li><Arrow>chevron_right</Arrow> Home</Li>
-          <Li><Arrow>chevron_right</Arrow> About</Li>
-          <Li><Arrow>chevron_right</Arrow> Work</Li>
-          <Li><Arrow>chevron_right</Arrow> Contact</Li>
+          <Li>
+            <ScrollLink activeClass="active" spy={true} smooth={true} offset={-80} duration={500} to="About" onClick={ handleMenuClick }>
+              <Arrow>chevron_right</Arrow> 
+              About
+            </ScrollLink>
+          </Li>
+          <Li>
+            <ScrollLink activeClass="active" spy={true} smooth={true} offset={-80} duration={500} to="TechStack" onClick={ handleMenuClick }>
+              <Arrow>chevron_right</Arrow> 
+              Tech Stack
+            </ScrollLink>
+          </Li>
+          <Li>
+            <ScrollLink activeClass="active" spy={true} smooth={true} offset={-80} duration={500} to="Work" onClick={ handleMenuClick }>
+              <Arrow>chevron_right</Arrow> 
+              Work
+            </ScrollLink>
+          </Li>
+          <Li>
+            <ScrollLink activeClass="active" spy={true} smooth={true} offset={-80} duration={500} to="Contact" onClick={ handleMenuClick }>
+              <Arrow>chevron_right</Arrow> 
+              Contact
+            </ScrollLink>
+          </Li>
         </List>
       </Nav>
     </Container>
