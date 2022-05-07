@@ -16,7 +16,7 @@ const Container = styled.section`
     flex-direction: column;
     justify-content: space-around;
 
-    min-height: 80vh;
+    min-height: 90vh;
   }
 `
 

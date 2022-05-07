@@ -58,11 +58,6 @@ const NavOl = styled.ol`
   width: 100%;
 `
 
-const NavLi = styled.li`
-  color: ${props => props.theme.white};
-  font-weight: 900;
-`
-
 const MenuBox = styled.button`
   position: relative;
   height: 24px;
@@ -106,11 +101,38 @@ const MenuLine = styled.span`
   background-color: ${props => props.theme.purple1};
 `
 
+const NavLi = styled.li`
+/*   display: flex;
+  flex-direction: column-reverse;
+  align-items: center; */
+
+  position: relative;
+
+  color: ${props => props.isActive[props.n] ? props.theme.purple1 : props.theme.white};
+  font-weight: 900;
+
+  cursor: pointer;
+
+  ${props => props.isActive[props.n] && '&::before{ content: "•"; position: absolute; left: 50%; bottom: -100%;}'}
+
+`
+
 function Header() {
   const [wasClicked, setWasClicked] = useState(false);
+  const [isActive, setIsActive] = useState([false, false, false, false]);
 
   function handleMenuClick() {
     setWasClicked(!wasClicked)
+  }
+
+  function handleSetActive(n) {
+    const newState = isActive.map((e, i) => i === n ? true : e);
+    setIsActive(newState);
+  }
+
+  function handleSetInactive(n) {
+    const newState = isActive.map((e, i) => i === n ? false : e);
+    setIsActive(newState);
   }
 
   return (
@@ -126,17 +148,17 @@ function Header() {
 
         <Nav>
           <NavOl>
-            <NavLi>
-              <Link activeClass="active" spy={true} smooth={true} offset={-200} duration={500} to="About">About</Link>
+            <NavLi n={0} isActive={ isActive }>
+              <Link onSetActive={ () => handleSetActive(0) } onSetInactive={ () => handleSetInactive(0) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="About">About</Link>
             </NavLi>
-            <NavLi>
-              <Link activeClass="active" spy={true} smooth={true} offset={-200} duration={500} to="TechStack">Tech Stack</Link>
+            <NavLi n={1} isActive={ isActive }>
+              <Link onSetActive={ () => handleSetActive(1) } onSetInactive={ () => handleSetInactive(1) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="TechStack">Tech Stack</Link>
             </NavLi>
-            <NavLi>
-              <Link activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="Work">Work</Link>
+            <NavLi n={2} isActive={ isActive }>
+              <Link onSetActive={ () => handleSetActive(2) } onSetInactive={ () => handleSetInactive(2) }  activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="Work">Work</Link>
             </NavLi>
-            <NavLi>
-              <Link ctiveClass="active" spy={true} smooth={true} offset={-200} duration={500} to="Contact">Contact</Link>
+            <NavLi n={3} isActive={ isActive }>
+              <Link onSetActive={ () => handleSetActive(3) } onSetInactive={ () => handleSetInactive(3) } activeClass="active" spy={true} smooth={true} offset={-100} duration={500} to="Contact">Contact</Link>
             </NavLi>
           </NavOl>
         </Nav>
