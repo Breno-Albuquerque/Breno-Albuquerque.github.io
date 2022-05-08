@@ -27,9 +27,9 @@ const Container = styled.div`
     margin-right: 64px;
     margin-bottom: 64px;
 
-    color: ${props => props.theme.text};
-    border: 1px solid ${props => props.theme.back};
-    background: ${props => props.theme.alt1};
+    color: ${props => props.theme.main};
+    border: 1px solid ${props => props.theme.alt2};
+    background: ${props => props.theme.alt2};
 
     transition: all 0.1s;
 
@@ -64,9 +64,16 @@ const Anchor = styled.a`
 
   font-size: 18px;
 
+  transition: all 0.1s;
+
   @media(min-width: 992px) {
-    color: ${props => props.theme.back};
-    background: ${props => props.theme.text};
+    color: ${props => props.theme.main};
+    background: ${props => props.theme.back};
+
+    ${Container}:hover &{
+      color: ${props => props.theme.back};
+      background: ${props => props.theme.text};
+    }
   }
 `
 
@@ -92,7 +99,11 @@ const Line = styled.span`
   height: 1px;
 
   @media(min-width: 992px) {
-    background-color: ${props => props.theme.text};
+    background-color: ${props => props.theme.alt1};
+
+    ${Container}:hover &{
+      background-color: ${props => props.theme.text};
+    }
   }
 `
 
@@ -108,19 +119,19 @@ const GithubAnchor = styled.a`
 function Card(props) {
   const { id, name, description, link, techs, repository } = props.project;
   const theme = useContext(ThemeContext);
-  const [svgColor, setSvgColor] = useState(theme.text);
+  const [svgColor, setSvgColor] = useState(theme.alt1);
 
 
-/*   function handleMouseOver() {
+  function handleMouseOver() {
     setSvgColor(theme.text);
   }
 
   function handleMouseLeave() {
-    setSvgColor(theme.text);
-  } */
+    setSvgColor(theme.alt1);
+  } 
 
   return (
-    <Container /* onMouseOver={ handleMouseOver } onMouseLeave={ handleMouseLeave } */ id={ id } > 
+    <Container onMouseOver={ handleMouseOver } onMouseLeave={ handleMouseLeave } id={ id } > 
       <CardTitle>{ name }</CardTitle>
       <CardDescription>{ description }</CardDescription>
       <Line />

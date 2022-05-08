@@ -105,7 +105,7 @@ const HelloButton = styled.button`
 
   &:hover{
     background-color: ${props => props.theme.main};
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.back};
   }
 `
 
@@ -115,7 +115,7 @@ const ButtonCurriculum = styled.button`
 
   font-size: 16px;
   font-weight: 900;
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.back};
 
   border: 1px solid ${props => props.theme.main};
   border-radius: 0 50px 0 50px;
@@ -123,7 +123,10 @@ const ButtonCurriculum = styled.button`
   background: ${props => props.theme.main};
 
   cursor: pointer;
+`
 
+const Test = styled.span`
+  color: ${props => props.theme.soft};
 `
 
 function Home() {
@@ -131,7 +134,7 @@ function Home() {
     <Section id="Home">
       <Container>
         <Title>
-          Hi! I'm <Name>Breno Albuquerque</Name>,<br/>Web Developer
+          Hi! I'm <Name>Breno Albuquerque</Name>,<br/> <Test>Web Developer</Test>
         </Title>
         <Introduction>
         I'm a <Highlight>Front-End Web Developer</Highlight> specialized in React applications. Currently 
