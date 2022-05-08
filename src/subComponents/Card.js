@@ -6,8 +6,8 @@ import { ThemeContext } from 'styled-components';
 const Container = styled.div`
   background: none;
   color: ${props => props.theme.text};
-  border-radius: 0 50px 0 50px;
   border: 1px solid ${props => props.theme.main};
+  border-radius: 0 50px 0 50px;
   
   width: 256px;
   min-height: 304px;
@@ -52,8 +52,8 @@ const Anchor = styled.a`
   justify-content: center;
   align-items: center;
 
-  background-color: ${props => props.theme.text};
-  color: ${props => props.theme.main};
+  color: ${props => props.theme.back};
+  background: ${props => props.theme.text};
   text-decoration: none;
 
   border-radius: 0 0 0 50px;
@@ -119,7 +119,7 @@ const GithubAnchor = styled.a`
 function Card(props) {
   const { id, name, description, link, techs, repository } = props.project;
   const theme = useContext(ThemeContext);
-  const [svgColor, setSvgColor] = useState(theme.alt1);
+  const [svgColor, setSvgColor] = useState(theme.main);
 
 
   function handleMouseOver() {
@@ -127,7 +127,7 @@ function Card(props) {
   }
 
   function handleMouseLeave() {
-    setSvgColor(theme.alt1);
+    setSvgColor(theme.main);
   } 
 
   return (

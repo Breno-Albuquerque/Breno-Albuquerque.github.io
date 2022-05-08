@@ -74,6 +74,9 @@ const SvgsContainer = styled.div`
 
   @media(min-width: 992px) {
     max-width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
   }
 `
 
@@ -85,20 +88,30 @@ const SvgBox = styled.div`
 
   border-radius: 0 50px 0 50px;
 
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
 
   margin-bottom: 16px;
 
-  box-shadow: 2px 2px 2px  ${props => props.theme.alt1};
+/*   box-shadow: 2px 2px 2px 0 ${props => props.theme.alt1}; */
 
   box-sizing: border-box;
   padding: 8px;
 
-  border: 1px solid ${props => props.theme.alt1};
+  border: 1px solid ${props => props.theme.main};
 
   @media(min-width: 768px) {
     margin-right: 32px;
+  }
+
+  @media(min-width: 992px) {
+    background-color: ${props => props.theme.alt2};
+    border: 1px solid ${props => props.theme.back};
+
+    &:hover{
+      background-color: ${props => props.theme.back};
+      border: 1px solid ${props => props.theme.main};
+    }
   }
 `
 
@@ -143,19 +156,14 @@ function TechStack() {
           <Docker width={ 50 } />
           <SvgName>Docker</SvgName>
         </SvgBox>
-
-
         <SvgBox>
           <Jest width={ 50 } />
           <SvgName>Jest</SvgName>
         </SvgBox>
-
         <SvgBox>
           <Node width={ 50 } />
           <SvgName>Node.js</SvgName>
         </SvgBox>
-
-
         <SvgBox>
           <Sql width={ 50 } />
           <SvgName>MySQL</SvgName>
