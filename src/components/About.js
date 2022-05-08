@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import myPicture2 from '../images/myPicture2.png';
+import myPicture3 from '../images/myPicture3.png';
 
 
 const Container = styled.section`
@@ -123,7 +123,7 @@ function About() {
           </Text>
           
         </SubContainer>
-        <Picture src={ myPicture2 } alt="Profile Picture"/>
+        <Picture src={ myPicture3 } alt="Profile Picture"/>
       </ImgTextBox>
     </Container>
   )

@@ -98,6 +98,8 @@ const SvgBox = styled.div`
   box-sizing: border-box;
   padding: 8px;
 
+  transition: all ease 0.2s;
+
   border: 1px solid ${props => props.theme.main};
 
   @media(min-width: 768px) {
@@ -105,7 +107,7 @@ const SvgBox = styled.div`
   }
 
   @media(min-width: 992px) {
-    background-color: ${props => props.theme.alt2};
+    background-color: ${props => props.theme.backL};
     border: 1px solid ${props => props.theme.back};
 
     &:hover{

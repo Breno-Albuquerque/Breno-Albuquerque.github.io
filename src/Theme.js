@@ -13,6 +13,8 @@ export const theme = {
   main: '#38FDD8',
   soft: '#9A8C98',
   alt1: '#0B7A75',
-  alt2: '#25283D',
-  alt3: '#FA2055',
+
+  mainL: '#72FEE4',
+  backL: '#25283D',
+  backLL: '#2F324C'
 }

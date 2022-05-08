@@ -18,13 +18,13 @@ const Container = styled.a`
   margin: 0 auto;
   margin-bottom: 16px;
 
-  background-color: ${props => props.theme.alt1};
+  background-color: ${props => props.theme.backLL};
   color: ${props => props.theme.text};
 
   border-radius: 0 50px 0 50px;
 
   &:hover{
-    background-color: ${props => props.theme.text};
+    background-color: ${props => props.theme.mainL};
     color: ${props => props.theme.back};
   }
 `

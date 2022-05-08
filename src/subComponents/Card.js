@@ -27,9 +27,9 @@ const Container = styled.div`
     margin-right: 64px;
     margin-bottom: 64px;
 
-    color: ${props => props.theme.main};
-    border: 1px solid ${props => props.theme.alt2};
-    background: ${props => props.theme.alt2};
+    color: ${props => props.theme.mainL};
+    border: 1px solid ${props => props.theme.backLL};
+    background: ${props => props.theme.backLL};
 
     transition: all 0.1s;
 
@@ -67,7 +67,7 @@ const Anchor = styled.a`
   transition: all 0.1s;
 
   @media(min-width: 992px) {
-    color: ${props => props.theme.main};
+    color: ${props => props.theme.mainL};
     background: ${props => props.theme.back};
 
     ${Container}:hover &{
@@ -80,6 +80,10 @@ const Anchor = styled.a`
 const CardTitle = styled.h4`
   width: 100%;
   font-size: 20px;
+
+  @media(min-width: 992px) {
+    font-size: 22px;
+  }
 `
 
 const CardDescription = styled.p`
@@ -109,6 +113,10 @@ const Line = styled.span`
 
 const Tags = styled.p`
   font-size: 12px;
+
+  @media(min-width: 992px) {
+    font-size: 14px;
+  }
 `
 
 const GithubAnchor = styled.a`
@@ -119,7 +127,7 @@ const GithubAnchor = styled.a`
 function Card(props) {
   const { id, name, description, link, techs, repository } = props.project;
   const theme = useContext(ThemeContext);
-  const [svgColor, setSvgColor] = useState(theme.main);
+  const [svgColor, setSvgColor] = useState(theme.mainL);
 
 
   function handleMouseOver() {
@@ -127,7 +135,7 @@ function Card(props) {
   }
 
   function handleMouseLeave() {
-    setSvgColor(theme.main);
+    setSvgColor(theme.mainL);
   } 
 
   return (
