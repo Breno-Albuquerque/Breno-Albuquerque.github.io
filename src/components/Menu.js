@@ -14,7 +14,7 @@ const Container = styled.div`
   width: 75%;
 
   transition: all ease 0.25s;
-  background-color: ${props => props.theme.black};
+  background-color: inherit;
 
   display: flex;
   flex-direction: column;

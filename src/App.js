@@ -14,7 +14,7 @@ import TechStack from './components/TechStack';
 const ContentContainer = styled.div`
   box-sizing: border-box;
   
-  background-color: ${props => props.theme.back};
+  background-color: inherit;
   font-family: 'Poppins', sans-serif;
 
   max-width: 992px;

@@ -10,7 +10,6 @@ const Container = styled.section`
   box-sizing: border-box;
   padding: 16px;
 
-
   @media(min-width: 576px) {
     padding: 32px;
   }
