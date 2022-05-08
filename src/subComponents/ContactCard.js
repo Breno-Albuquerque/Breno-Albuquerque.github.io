@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.a`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  text-decoration: none;
 
   width: 100%;
   max-width: 400px;
@@ -16,15 +18,22 @@ const Container = styled.div`
   margin-bottom: 16px;
 
   background-color: ${props => props.theme.purple2};
+  color: ${props => props.theme.white};
 
   border-radius: 0 50px 0 50px;
+
+  transition: all 0.3s;
+
+  &:hover{
+    background-color: ${props => props.theme.white};
+    color: ${props => props.theme.black};
+  }
 `
 
 const AnchorBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: ${props => props.theme.white};
 
   font-weight: 900;
   width: 60%;
@@ -43,7 +52,8 @@ function ContactCard({ data }) {
   const { id, text, icon, link } = data
 
   return (
-    <Container id={ id } >
+    <Container id={ id } href={ link }
+    target="_blank" rel="noreferrer">
       <img src={ icon } alt="Midia Icon"/>
       <AnchorBox>
         <AnchorText>{ text }</AnchorText>

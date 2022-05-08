@@ -77,7 +77,7 @@ const Github = styled.a`
 `
 
 function Card(props) {
-  const { id, name, description, link, techs } = props.project;
+  const { id, name, description, link, techs, repository } = props.project;
 
   return (
     <Container id={ id } > 
@@ -86,8 +86,8 @@ function Card(props) {
       <Line />
       <Tags>{ techs.map((tech) => <span>{' '}{ tech }</span>) }</Tags>
       <Footer>
-        <Anchor href={ link }>Visit</Anchor>
-        <Github href='#'><img src={ github } alt="Github Icon" ></img></Github>
+        <Anchor href={ link } target="_blank">Visit</Anchor>
+        <Github href={ repository } target="_blank"><img src={ github } alt="Github Icon" ></img></Github>
       </Footer>
     </Container>
   )

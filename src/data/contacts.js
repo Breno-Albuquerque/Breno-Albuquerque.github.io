@@ -8,19 +8,19 @@ export const contacts = [
     id: 1,
     text: "Send e-mail",
     icon: email,
-    link: "#",
+    link: "mailto:brenoralbu@hotmail.com",
   },
   {
     id: 1,
     text: "My GitHub",
     icon: github,
-    link: "#",
+    link: "https://github.com/breno-albuquerque",
   },
   {
     id: 1,
     text: "My linkedin",
     icon: linkedin,
-    link: "#",
+    link: "https://www.linkedin.com/in/breno-albuquerque-34a5091a5/",
   },
   {
     id: 1,

@@ -95,9 +95,17 @@ const HelloButton = styled.button`
   margin-right: 16px;
 
   background: none;
+  cursor: pointer;
 
   @media(max-width: 335px) {
     margin-bottom: 32px;
+  }
+
+  transition: all 0.3s;
+
+  &:hover{
+    background-color: ${props => props.theme.purple1};
+    color: ${props => props.theme.white};
   }
 `
 
@@ -113,6 +121,9 @@ const ButtonCurriculum = styled.button`
   border-radius: 0 50px 0 50px;
 
   background: ${props => props.theme.purple1};
+
+  cursor: pointer;
+
 `
 
 function Home() {
