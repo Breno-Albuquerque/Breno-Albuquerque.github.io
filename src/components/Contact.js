@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import ContactCard from '../subComponents/ContactCard';
 import { contacts } from '../data/contacts';
+import { ThemeContext } from 'styled-components';
 
 const Container = styled.section`
   box-sizing: border-box;
@@ -46,11 +47,13 @@ const Footer = styled.footer`
 `
 
 function Contact() {
+  const theme = useContext(ThemeContext);
+
   return (
     <Container id="Contact">
       <Title>Get In Touch</Title>
       { contacts.map((data) => (
-        <ContactCard data={ data } />
+        <ContactCard data={ data } theme={ theme } />
       )) }
       <Footer>Designed & Built by Breno Albuquerque. </Footer>
     </Container>

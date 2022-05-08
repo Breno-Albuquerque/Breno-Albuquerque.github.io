@@ -24,8 +24,8 @@ const ContentContainer = styled.div`
 function App() {
   return (
     <>
-      <GlobalStyle/>
       <ThemeProvider theme={theme}>
+      <GlobalStyle/>
           <Header/>
           <ContentContainer>
             <Home />

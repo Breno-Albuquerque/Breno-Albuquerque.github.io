@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Curriculum, Email, Github, Linkedin } from '../images/contact/contactSvgs';
 
 const Container = styled.a`
   display: flex;
@@ -21,8 +22,6 @@ const Container = styled.a`
   color: ${props => props.theme.white};
 
   border-radius: 0 50px 0 50px;
-
-  transition: all 0.3s;
 
   &:hover{
     background-color: ${props => props.theme.white};
@@ -48,13 +47,25 @@ const AnchorArrow = styled.a`
   font-size: 20px;
 `
 
-function ContactCard({ data }) {
-  const { id, text, icon, link } = data
+function ContactCard(props) {
+  const { id, text, icon, link } = props.data;
+  const [svgColor, setSvgColor] = useState(props.theme.white);
+
+  function handleMouseOver() {
+    setSvgColor(props.theme.black);
+  }
+
+  function handleMouseLeave() {
+    setSvgColor(props.theme.white);
+  }
 
   return (
-    <Container id={ id } href={ link }
+    <Container onMouseLeave={ handleMouseLeave } onMouseOver={ handleMouseOver } id={ id } href={ link }
     target="_blank" rel="noreferrer">
-      <img src={ icon } alt="Midia Icon"/>
+      { icon === 'email' && <Email fill={ svgColor } /> }
+      { icon === 'github' && <Github fill={ svgColor } /> }
+      { icon === 'linkedin' && <Linkedin fill={ svgColor } /> }
+      { icon === 'curriculum' && <Curriculum fill={ svgColor } /> }
       <AnchorBox>
         <AnchorText>{ text }</AnchorText>
         <AnchorArrow>arrow_forward</AnchorArrow>

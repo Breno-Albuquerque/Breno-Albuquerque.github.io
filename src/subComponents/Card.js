@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components';
-import github from '../images/github.svg';
+import { Github } from '../images/contact/contactSvgs';
+import { ThemeContext } from 'styled-components';
 
 const Container = styled.div`
   background: none;
@@ -19,6 +20,25 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media(min-width: 992px) {
+    min-height: 381px;
+    width: 281px;
+    margin-right: 64px;
+    margin-bottom: 64px;
+
+    color: ${props => props.theme.white};
+    border: 1px solid ${props => props.theme.black};
+    background: ${props => props.theme.purple2};
+
+    transition: all 0.1s;
+
+    &:hover{
+      background: none;
+      color: ${props => props.theme.white};
+      border: 1px solid ${props => props.theme.purple1};
+    }
+  }
 `
 
 const Footer = styled.footer`
@@ -43,6 +63,11 @@ const Anchor = styled.a`
   height: 40px;
 
   font-size: 18px;
+
+  @media(min-width: 992px) {
+    color: ${props => props.theme.black};
+    background: ${props => props.theme.white};
+  }
 `
 
 const CardTitle = styled.h4`
@@ -65,29 +90,44 @@ const Line = styled.span`
 
   width: 90%;
   height: 1px;
+
+  @media(min-width: 992px) {
+    background-color: ${props => props.theme.white};
+  }
 `
 
 const Tags = styled.p`
   font-size: 12px;
 `
 
-const Github = styled.a`
+const GithubAnchor = styled.a`
   display: flex;
   align-items: flex-end;
 `
 
 function Card(props) {
   const { id, name, description, link, techs, repository } = props.project;
+  const theme = useContext(ThemeContext);
+  const [svgColor, setSvgColor] = useState(theme.white);
+
+
+/*   function handleMouseOver() {
+    setSvgColor(theme.white);
+  }
+
+  function handleMouseLeave() {
+    setSvgColor(theme.white);
+  } */
 
   return (
-    <Container id={ id } > 
+    <Container /* onMouseOver={ handleMouseOver } onMouseLeave={ handleMouseLeave } */ id={ id } > 
       <CardTitle>{ name }</CardTitle>
       <CardDescription>{ description }</CardDescription>
       <Line />
       <Tags>{ techs.map((tech) => <span>{' '}{ tech }</span>) }</Tags>
       <Footer>
         <Anchor href={ link } target="_blank">Visit</Anchor>
-        <Github href={ repository } target="_blank"><img src={ github } alt="Github Icon" ></img></Github>
+        <GithubAnchor href={ repository } target="_blank"> <Github fill={ svgColor } /> </GithubAnchor>
       </Footer>
     </Container>
   )

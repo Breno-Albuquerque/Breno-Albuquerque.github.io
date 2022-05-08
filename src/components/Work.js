@@ -67,8 +67,10 @@ const WorkList = styled.ul`
 
   @media(min-width: 992px) {
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 80%;
+    align-self: flex-start;
   }
 `
 
