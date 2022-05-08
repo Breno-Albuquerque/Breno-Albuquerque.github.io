@@ -32,7 +32,7 @@ const Box = styled.div`
 
 const Title = styled.h3`
   font-size: 22px;
-  color: ${props => props.theme.purple1};
+  color: ${props => props.theme.main};
 
   @media(min-width: 992px) {
     font-size: 32px;
@@ -40,7 +40,7 @@ const Title = styled.h3`
 `
 
 const Line = styled.span`
-  background-color: ${props => props.theme.purple1};
+  background-color: ${props => props.theme.main};
 
   flex-grow: 0.95;
   height: 1px;
@@ -90,12 +90,12 @@ const SvgBox = styled.div`
 
   margin-bottom: 16px;
 
-  box-shadow: 2px 2px 2px  ${props => props.theme.purple2};
+  box-shadow: 2px 2px 2px  ${props => props.theme.alt1};
 
   box-sizing: border-box;
   padding: 8px;
 
-  border: 1px solid ${props => props.theme.purple2};
+  border: 1px solid ${props => props.theme.alt1};
 
   @media(min-width: 768px) {
     margin-right: 32px;
@@ -104,7 +104,7 @@ const SvgBox = styled.div`
 
 const SvgName = styled.span`
   font-size: 14px;
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.text};
 `
 
 function TechStack() {

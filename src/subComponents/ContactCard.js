@@ -18,14 +18,14 @@ const Container = styled.a`
   margin: 0 auto;
   margin-bottom: 16px;
 
-  background-color: ${props => props.theme.purple2};
-  color: ${props => props.theme.white};
+  background-color: ${props => props.theme.alt1};
+  color: ${props => props.theme.text};
 
   border-radius: 0 50px 0 50px;
 
   &:hover{
-    background-color: ${props => props.theme.white};
-    color: ${props => props.theme.black};
+    background-color: ${props => props.theme.text};
+    color: ${props => props.theme.back};
   }
 `
 
@@ -49,14 +49,14 @@ const AnchorArrow = styled.a`
 
 function ContactCard(props) {
   const { id, text, icon, link } = props.data;
-  const [svgColor, setSvgColor] = useState(props.theme.white);
+  const [svgColor, setSvgColor] = useState(props.theme.text);
 
   function handleMouseOver() {
-    setSvgColor(props.theme.black);
+    setSvgColor(props.theme.back);
   }
 
   function handleMouseLeave() {
-    setSvgColor(props.theme.white);
+    setSvgColor(props.theme.text);
   }
 
   return (

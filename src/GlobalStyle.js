@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
   }
   &:root{
     font-size: 16px;
-    background-color: ${ props => props.theme.black };
+    background-color: ${ props => props.theme.back };
   }
 `
 export default GlobalStyle;

@@ -7,7 +7,7 @@ const Symbol = styled.div`
 
   margin-top: 4px;
 
-  color: ${props => props.theme.purple1};
+  color: ${props => props.theme.main};
 `
 
 function Bsymbol() {

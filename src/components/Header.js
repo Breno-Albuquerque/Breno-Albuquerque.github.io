@@ -13,8 +13,8 @@ const Container = styled.header`
 
   box-sizing: border-box;
 
-  background-color: ${props => props.theme.black};
-  box-shadow: 0px 2px 8px 0px ${props => props.theme.purple1};
+  background-color: ${props => props.theme.back};
+  box-shadow: 0px 2px 8px 0px ${props => props.theme.main};
 
   z-index: 9;
 
@@ -98,7 +98,7 @@ const MenuLine = styled.span`
     if (props.position === 'bottom' && props.wasClicked) return 'rotate(45deg) translateY(6px) translateX(6px)'
   }};
 
-  background-color: ${props => props.theme.purple1};
+  background-color: ${props => props.theme.main};
 `
 
 const NavLi = styled.li`
@@ -108,7 +108,7 @@ const NavLi = styled.li`
 
   position: relative;
 
-  color: ${props => props.isActive[props.n] ? props.theme.purple1 : props.theme.white};
+  color: ${props => props.isActive[props.n] ? props.theme.main : props.theme.text};
   font-weight: 900;
 
   cursor: pointer;

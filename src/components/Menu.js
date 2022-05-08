@@ -34,7 +34,7 @@ const Nav = styled.nav`
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
 
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.text};
 `
 
 const List = styled.ul`
@@ -53,7 +53,7 @@ const Li = styled.li`
 
 const Arrow = styled.span`
   font-family: 'Material Icons';
-  color: ${props => props.theme.purple1};
+  color: ${props => props.theme.main};
 
   margin-right: 8px;
 `

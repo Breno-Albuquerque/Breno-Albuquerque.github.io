@@ -16,7 +16,7 @@ const Container = styled.section`
 `
 
 const Title = styled.h2`
-  color: ${props => props.theme.purple1};
+  color: ${props => props.theme.main};
   font-size: 24px;
   font-weight: bold;
 
@@ -36,7 +36,7 @@ const Title = styled.h2`
 `
 
 const Footer = styled.footer`
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.text};
   font-size: 14px;
 
   margin-top: 48px;

@@ -5,9 +5,9 @@ import { ThemeContext } from 'styled-components';
 
 const Container = styled.div`
   background: none;
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.text};
   border-radius: 0 50px 0 50px;
-  border: 1px solid ${props => props.theme.purple1};
+  border: 1px solid ${props => props.theme.main};
   
   width: 256px;
   min-height: 304px;
@@ -27,16 +27,16 @@ const Container = styled.div`
     margin-right: 64px;
     margin-bottom: 64px;
 
-    color: ${props => props.theme.white};
-    border: 1px solid ${props => props.theme.black};
-    background: ${props => props.theme.purple2};
+    color: ${props => props.theme.text};
+    border: 1px solid ${props => props.theme.back};
+    background: ${props => props.theme.alt1};
 
     transition: all 0.1s;
 
     &:hover{
       background: none;
-      color: ${props => props.theme.white};
-      border: 1px solid ${props => props.theme.purple1};
+      color: ${props => props.theme.text};
+      border: 1px solid ${props => props.theme.main};
     }
   }
 `
@@ -52,8 +52,8 @@ const Anchor = styled.a`
   justify-content: center;
   align-items: center;
 
-  background-color: ${props => props.theme.white};
-  color: ${props => props.theme.purple1};
+  background-color: ${props => props.theme.text};
+  color: ${props => props.theme.main};
   text-decoration: none;
 
   border-radius: 0 0 0 50px;
@@ -65,8 +65,8 @@ const Anchor = styled.a`
   font-size: 18px;
 
   @media(min-width: 992px) {
-    color: ${props => props.theme.black};
-    background: ${props => props.theme.white};
+    color: ${props => props.theme.back};
+    background: ${props => props.theme.text};
   }
 `
 
@@ -86,13 +86,13 @@ const CardDescription = styled.p`
 `
 
 const Line = styled.span`
-  background-color: ${props => props.theme.white};
+  background-color: ${props => props.theme.text};
 
   width: 90%;
   height: 1px;
 
   @media(min-width: 992px) {
-    background-color: ${props => props.theme.white};
+    background-color: ${props => props.theme.text};
   }
 `
 
@@ -108,15 +108,15 @@ const GithubAnchor = styled.a`
 function Card(props) {
   const { id, name, description, link, techs, repository } = props.project;
   const theme = useContext(ThemeContext);
-  const [svgColor, setSvgColor] = useState(theme.white);
+  const [svgColor, setSvgColor] = useState(theme.text);
 
 
 /*   function handleMouseOver() {
-    setSvgColor(theme.white);
+    setSvgColor(theme.text);
   }
 
   function handleMouseLeave() {
-    setSvgColor(theme.white);
+    setSvgColor(theme.text);
   } */
 
   return (

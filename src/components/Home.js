@@ -35,7 +35,7 @@ const Title = styled.h1`
 
   line-height: 40px;
 
-  color: ${props => props.theme.purple1};
+  color: ${props => props.theme.main};
 
   @media(min-width: 576px) {
     font-size: 40px;
@@ -44,7 +44,7 @@ const Title = styled.h1`
 `
 
 const Name = styled.span`
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.text};
 `
 
 const Introduction = styled.article`
@@ -56,7 +56,7 @@ const Introduction = styled.article`
   width: 95%;
   max-width: 576px;
 
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.text};
 
   @media(min-width: 576px) {
     font-size: 16px;
@@ -69,7 +69,7 @@ const Introduction = styled.article`
 `
 
 const Highlight = styled.span`
-  color: ${props => props.theme.purple1};
+  color: ${props => props.theme.main};
 `
 
 const ButtonsBox = styled.div`
@@ -88,9 +88,9 @@ const HelloButton = styled.button`
 
   font-size: 16px;
   font-weight: 900;
-  color: ${props => props.theme.purple1};
+  color: ${props => props.theme.main};
 
-  border: 1px solid ${props => props.theme.purple1};
+  border: 1px solid ${props => props.theme.main};
   border-radius: 0 50px 0 50px;
   margin-right: 16px;
 
@@ -104,8 +104,8 @@ const HelloButton = styled.button`
   transition: all 0.3s;
 
   &:hover{
-    background-color: ${props => props.theme.purple1};
-    color: ${props => props.theme.white};
+    background-color: ${props => props.theme.main};
+    color: ${props => props.theme.text};
   }
 `
 
@@ -115,12 +115,12 @@ const ButtonCurriculum = styled.button`
 
   font-size: 16px;
   font-weight: 900;
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.text};
 
-  border: 1px solid ${props => props.theme.purple1};
+  border: 1px solid ${props => props.theme.main};
   border-radius: 0 50px 0 50px;
 
-  background: ${props => props.theme.purple1};
+  background: ${props => props.theme.main};
 
   cursor: pointer;
 
