@@ -35,6 +35,7 @@ const Title = styled.h3`
 
   @media(min-width: 992px) {
     font-size: 32px;
+    text-align: center;
   }
 `
 

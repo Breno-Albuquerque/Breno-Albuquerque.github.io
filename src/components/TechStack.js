@@ -34,10 +34,11 @@ const Box = styled.div`
 const Title = styled.h3`
   font-size: 22px;
   color: ${props => props.theme.main};
-  text-align: center;
-  width: 100%;
-
+  
   @media(min-width: 992px) {
+
+    width: 100%;
+    text-align: center;
     font-size: 32px;
   }
 `
