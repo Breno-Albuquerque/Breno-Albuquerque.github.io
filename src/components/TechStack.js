@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Css, Docker, Git, Html, Jest, Js, Node, ReactSvg, Redux, Sql, Ts } from '../images/techstack/AllSvgs';
+import { Css, Docker, Git, Html, Jest, Js, Node, ReactSvg, Redux, Sql, Ts, Express } from '../images/techstack/AllSvgs';
 
 const Container = styled.section`
   display: flex;
@@ -18,6 +18,7 @@ const Container = styled.section`
   @media(min-width: 992px) {
     min-height: 60vh;
     justify-content: center;
+    align-items: center;
   }
 `
 
@@ -33,6 +34,8 @@ const Box = styled.div`
 const Title = styled.h3`
   font-size: 22px;
   color: ${props => props.theme.main};
+  text-align: center;
+  width: 100%;
 
   @media(min-width: 992px) {
     font-size: 32px;
@@ -74,7 +77,7 @@ const SvgsContainer = styled.div`
 
   @media(min-width: 992px) {
     max-width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     margin-left: 0;
     margin-right: 0;
   }
@@ -170,10 +173,14 @@ function TechStack() {
           <Sql width={ 50 } />
           <SvgName>MySQL</SvgName>
         </SvgBox>
-  {/*       <SvgBox>
+        <SvgBox>
+          <Express width={ 50 } />
+          <SvgName>Express</SvgName>
+        </SvgBox>
+        <SvgBox>
           <Ts width={ 50 } />
           <SvgName>TypeScript</SvgName>
-        </SvgBox> */}
+        </SvgBox>
     </SvgsContainer>
     </Container>
   )
