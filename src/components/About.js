@@ -34,6 +34,7 @@ const Title = styled.h3`
   color: ${props => props.theme.main};
 
   @media(min-width: 992px) {
+    width: 100%;
     font-size: 32px;
     text-align: center;
   }
