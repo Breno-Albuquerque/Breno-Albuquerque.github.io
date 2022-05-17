@@ -38,6 +38,8 @@ const Title = styled.h3`
   color: ${props => props.theme.main};
 
   @media(min-width: 992px) {
+    width: 100%;
+    text-align: center;
     font-size: 32px;
   }
 `
@@ -67,10 +69,10 @@ const WorkList = styled.ul`
 
   @media(min-width: 992px) {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
-    width: 80%;
-    align-self: flex-start;
+    width: 100%;
+    align-self: center;
   }
 `
 

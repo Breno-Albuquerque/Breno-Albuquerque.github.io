@@ -24,7 +24,7 @@ const Container = styled.div`
   @media(min-width: 992px) {
     min-height: 381px;
     width: 281px;
-    margin-right: 64px;
+    /* margin-right: 64px; */
     margin-bottom: 64px;
 
     color: ${props => props.theme.mainL};

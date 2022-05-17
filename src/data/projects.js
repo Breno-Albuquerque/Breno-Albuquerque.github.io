@@ -23,4 +23,28 @@ export const projects = [
     techs: ['#React', '#Redux', '#Css'],
     repository: 'https://github.com/breno-albuquerque/trivia-game'
   },
+  {
+    id: 4,
+    name: "Talker Manager",
+    description: "A trivia game with 5 random questions, timer, score, and ranking exibihtion",
+    link: "https://trivia-game-b.vercel.app",
+    techs: ['#React', '#Redux', '#Css'],
+    repository: 'https://github.com/breno-albuquerque/trivia-game'
+  },
+  {
+    id: 5,
+    name: "Talker Manager",
+    description: "A trivia game with 5 random questions, timer, score, and ranking exibihtion",
+    link: "https://trivia-game-b.vercel.app",
+    techs: ['#React', '#Redux', '#Css'],
+    repository: 'https://github.com/breno-albuquerque/trivia-game'
+  },
+  {
+    id: 6,
+    name: "Talker Manager",
+    description: "A trivia game with 5 random questions, timer, score, and ranking exibihtion",
+    link: "https://trivia-game-b.vercel.app",
+    techs: ['#React', '#Redux', '#Css'],
+    repository: 'https://github.com/breno-albuquerque/trivia-game'
+  },
 ]
