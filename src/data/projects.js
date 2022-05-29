@@ -1,16 +1,16 @@
 export const projects = [
   {
     id: 1,
-    name: "App de receitas",
-    description: "A recipes application with multiple pages and functionalities",
+    name: "Store Manager",
+    description: "A Node.js with Express Back-end API to manager a MySQL store database and a React Front-end to display it.",
     link: "#",
-    techs: ['#React', '#Redux', '#Css'],
+    techs: ['#FullStack', '#Node.js', '#Express', '#React', '#MySQL', '#Tests'],
     repository: '#'
   },
   {
     id: 2,
     name: "TrybeWallet",
-    description: "A virtual wallet able to store multiple expenses in different currency values.",
+    description: "A React/Redux virtual wallet able to store multiple expenses in different currency values.",
     link: "https://trybewallet-b.vercel.app",
     techs: ['#React', '#Redux', '#Css'],
     repository: 'https://github.com/breno-albuquerque/trybewallet'
@@ -18,7 +18,7 @@ export const projects = [
   {
     id: 3,
     name: "Trivia Game",
-    description: "A trivia game with 5 random questions, timer, score, and ranking exibihtion",
+    description: "A React/Redux trivia game with 5 random questions, timer, score, and ranking exibihtion.",
     link: "https://trivia-game-b.vercel.app",
     techs: ['#React', '#Redux', '#Css'],
     repository: 'https://github.com/breno-albuquerque/trivia-game'

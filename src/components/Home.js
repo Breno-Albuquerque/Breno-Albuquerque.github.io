@@ -82,9 +82,15 @@ const ButtonsBox = styled.div`
   }
 `
 
-const HelloButton = styled.button`
+const HelloAnchor = styled.a`
   width: 144px;
   height: 48px;
+
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   font-size: 16px;
   font-weight: 900;
@@ -130,6 +136,7 @@ const Test = styled.span`
 `
 
 function Home() {
+
   return (
     <Section id="Home">
       <Container>
@@ -142,7 +149,7 @@ function Home() {
         </Introduction>
       </Container>
       <ButtonsBox>
-        <HelloButton>Say Hello !</HelloButton>
+        <HelloAnchor target="_blank" href='mailto:brenoralbu@hotmail.com'>Say Hello !</HelloAnchor>
         <ButtonCurriculum>Curriculum</ButtonCurriculum>
       </ButtonsBox>
     </Section>

@@ -23,7 +23,7 @@ const Container = styled.div`
 
   @media(min-width: 992px) {
     min-height: 381px;
-    width: 281px;
+    width: 272px;
     /* margin-right: 64px; */
     margin-bottom: 64px;
 
@@ -113,6 +113,7 @@ const Line = styled.span`
 
 const Tags = styled.p`
   font-size: 12px;
+  line-height: 18px;
 
   @media(min-width: 992px) {
     font-size: 14px;
