@@ -29,6 +29,10 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media(min-width: 992px) {
+    flex-direction: column;
+  }
 `
 
 const Title = styled.h3`
@@ -126,14 +130,29 @@ const SvgName = styled.span`
   color: ${props => props.theme.text};
 `
 
+const SubTitle = styled.h4`
+  color: ${props => props.theme.soft};
+  font-size: 18px;
+  margin: 10px 0;
+
+  @media(max-width: 992px) {
+    display: none;
+  }
+`
+
 function TechStack() {
   return (
     <Container id="TechStack">
       <Box>
         <Title>Tech Stack</Title>
+        <SubTitle>Most used tools</SubTitle>
         <Line/>
       </Box>
       <SvgsContainer>
+      <SvgBox>
+          <Node width={ 50 } />
+          <SvgName>Node.js</SvgName>
+        </SvgBox>
         <SvgBox>
           <ReactSvg width={ 50 } />
           <SvgName>React</SvgName>
@@ -141,6 +160,10 @@ function TechStack() {
         <SvgBox>
           <Redux width={ 50 } />
           <SvgName>Redux</SvgName>
+        </SvgBox>
+        <SvgBox>
+          <Ts width={ 50 } />
+          <SvgName>TypeScript</SvgName>
         </SvgBox>
         <SvgBox>
           <Html width={ 50 } />
@@ -159,28 +182,20 @@ function TechStack() {
           <SvgName>Git</SvgName>
         </SvgBox>
         <SvgBox>
+          <Express width={ 50 } />
+          <SvgName>Express</SvgName>
+        </SvgBox>
+        <SvgBox>
           <Docker width={ 50 } />
           <SvgName>Docker</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Jest width={ 50 } />
-          <SvgName>Jest</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Node width={ 50 } />
-          <SvgName>Node.js</SvgName>
         </SvgBox>
         <SvgBox>
           <Sql width={ 50 } />
           <SvgName>MySQL</SvgName>
         </SvgBox>
         <SvgBox>
-          <Express width={ 50 } />
-          <SvgName>Express</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Ts width={ 50 } />
-          <SvgName>TypeScript</SvgName>
+          <Jest width={ 50 } />
+          <SvgName>Jest</SvgName>
         </SvgBox>
     </SvgsContainer>
     </Container>

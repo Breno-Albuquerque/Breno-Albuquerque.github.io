@@ -31,6 +31,10 @@ const Box = styled.div`
   justify-content: flex-start;
 
   margin-bottom: 32px;
+
+  @media(min-width: 992px) {
+    flex-direction: column;
+  }
 `
 
 const Title = styled.h3`
@@ -76,11 +80,22 @@ const WorkList = styled.ul`
   }
 `
 
+const SubTitle = styled.h4`
+  color: ${props => props.theme.soft};
+  font-size: 18px;
+  margin: 10px 0;
+
+  @media(max-width: 992px) {
+    display: none;
+  }
+`
+
 function Work() {
   return (
     <Container id="Work">
       <Box>
         <Title>My Work</Title>
+        <SubTitle>Projects</SubTitle>
         <Line />
       </Box>
       <WorkList>

@@ -27,6 +27,10 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media(min-width: 992px) {
+    flex-direction: column;
+  }
 `
 
 const Title = styled.h3`
@@ -103,13 +107,22 @@ const ImgTextBox = styled.div`
     align-items: center;
   }
 `
+const SubTitle = styled.h4`
+  color: ${props => props.theme.soft};
+  font-size: 18px;
+  margin: 10px 0;
 
+  @media(max-width: 992px) {
+    display: none;
+  }
+`
 
 function About() {
   return (
     <Container id="About">
       <Box>
         <Title>About Me</Title>
+        <SubTitle>Description</SubTitle>
         <Line/>
       </Box>
       <ImgTextBox>
