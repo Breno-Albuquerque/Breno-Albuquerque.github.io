@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Section = styled.section`
   display: flex;
@@ -20,7 +21,7 @@ const Section = styled.section`
   }
 `
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -28,7 +29,7 @@ const Container = styled.div`
   width: 100%;
 `
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
   font-size: 26px;
 
   margin-bottom: 24px;
@@ -47,7 +48,7 @@ const Name = styled.span`
   color: ${props => props.theme.text};
 `
 
-const Introduction = styled.article`
+const Introduction = styled(motion.article)`
   align-self: flex-start;
 
   font-size: 15px;
@@ -82,7 +83,7 @@ const ButtonsBox = styled.div`
   }
 `
 
-const HelloAnchor = styled.a`
+const HelloAnchor = styled(motion.a)`
   width: 144px;
   height: 48px;
 
@@ -115,7 +116,7 @@ const HelloAnchor = styled.a`
   }
 `
 
-const ButtonCurriculum = styled.button`
+const ButtonCurriculum = styled(motion.button)`
   width: 144px;
   height: 48px;
 
@@ -139,18 +140,71 @@ function Home() {
 
   return (
     <Section id="Home">
-      <Container>
-        <Title>
-          Hi! I'm <Name>Breno Albuquerque</Name>,<br/> <Test>Web Developer</Test>
+      <Container
+      >
+        <Title
+          animate={{
+            opacity: 1,
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+        >
+          Hi! I'm <Name>Breno Albuquerque</Name>,<br /> <Test>Web Developer</Test>
         </Title>
-        <Introduction>
-        I'm a <Highlight>Front-End Web Developer</Highlight> specialized in React applications. Currently 
-        I'm coursing the Back-End module of <Highlight>Trybe</Highlight> to became Full Stack.
+
+        <Introduction
+          animate={{
+            opacity: 1,
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 0.5
+          }}
+        >
+          I'm a <Highlight>Front-End Web Developer</Highlight> specialized in React applications. Currently
+          I'm coursing the Back-End module of <Highlight>Trybe</Highlight> to became Full Stack.
         </Introduction>
+
       </Container>
       <ButtonsBox>
-        <HelloAnchor target="_blank" href='mailto:brenoralbu@hotmail.com'>Say Hello !</HelloAnchor>
-        <ButtonCurriculum>Curriculum</ButtonCurriculum>
+        <HelloAnchor
+          target="_blank"
+          href='mailto:brenoralbu@hotmail.com'
+          animate={{
+            opacity: 1,
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1.2
+          }}
+          >
+            Say Hello !
+        </HelloAnchor>
+        <ButtonCurriculum
+          animate={{
+            x: 0,
+          }}
+          initial={{
+            x: '-100vw',
+          }}
+          transition={{
+            duration: 1.3,
+            type: "spring",
+            stiffness: 50,
+            delay: 1,
+          }}
+        >Curriculum
+        </ButtonCurriculum>
       </ButtonsBox>
     </Section>
   )

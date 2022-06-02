@@ -19,6 +19,8 @@ const ContentContainer = styled.div`
 
   max-width: 992px;
   margin: 0 auto;
+
+  overflow: hidden;
 `
 
 function App() {
