@@ -1,9 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import Card from '../subComponents/Card';
-import { projects } from '../data/projects';
 
-const Container = styled.section`
+export const Container = styled.section`
   font-family: 'Poppins', sans-serif;
 
   display: flex;
@@ -23,7 +20,7 @@ const Container = styled.section`
   }
 `
 
-const Box = styled.div`
+export const Box = styled.div`
   width: 100%;
 
   display: flex;
@@ -37,7 +34,7 @@ const Box = styled.div`
   }
 `
 
-const Title = styled.h3`
+export const Title = styled.h3`
   font-size: 22px;
   color: ${props => props.theme.main};
 
@@ -48,7 +45,7 @@ const Title = styled.h3`
   }
 `
 
-const Line = styled.span`
+export const Line = styled.span`
   background-color: ${props => props.theme.main};
 
   flex-grow: 0.95;
@@ -65,7 +62,7 @@ const Line = styled.span`
   }
 `
 
-const WorkList = styled.ul`
+export const WorkList = styled.ul`
   display: flex;
   flex-direction: column;
   margin-top: 16px;
@@ -80,7 +77,7 @@ const WorkList = styled.ul`
   }
 `
 
-const SubTitle = styled.h4`
+export const SubTitle = styled.h4`
   color: ${props => props.theme.soft};
   font-size: 18px;
   margin: 10px 0;
@@ -89,22 +86,3 @@ const SubTitle = styled.h4`
     display: none;
   }
 `
-
-function Work() {
-  return (
-    <Container id="Work">
-      <Box>
-        <Title>My Work</Title>
-        <SubTitle>Projects</SubTitle>
-        <Line />
-      </Box>
-      <WorkList>
-        { projects.map((project) => (
-          <Card project={ project } />
-        )) }
-      </WorkList>
-    </Container>
-  )
-}
-
-export default Work;

@@ -1,9 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-import { Css, Docker, Git, Html, Jest, Js, Node, ReactSvg, Redux, Sql, Ts, Express } from '../images/techstack/AllSvgs';
-
-const Container = styled.section`
+export const Container = styled.section`
   display: flex;
   flex-direction: column;
 
@@ -22,7 +19,7 @@ const Container = styled.section`
   }
 `
 
-const Box = styled.div`
+export const Box = styled.div`
   width: 100%;
   margin-bottom: 32px;
 
@@ -35,7 +32,7 @@ const Box = styled.div`
   }
 `
 
-const Title = styled.h3`
+export const Title = styled.h3`
   font-size: 22px;
   color: ${props => props.theme.main};
   
@@ -47,7 +44,7 @@ const Title = styled.h3`
   }
 `
 
-const Line = styled.span`
+export const Line = styled.span`
   background-color: ${props => props.theme.main};
 
   flex-grow: 0.95;
@@ -64,7 +61,7 @@ const Line = styled.span`
   }
 `
 
-const SvgsContainer = styled.div`
+export const SvgsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   
@@ -88,7 +85,7 @@ const SvgsContainer = styled.div`
   }
 `
 
-const SvgBox = styled.div`
+export const SvgBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,12 +122,12 @@ const SvgBox = styled.div`
   }
 `
 
-const SvgName = styled.span`
+export const SvgName = styled.span`
   font-size: 14px;
   color: ${props => props.theme.text};
 `
 
-const SubTitle = styled.h4`
+export const SubTitle = styled.h4`
   color: ${props => props.theme.soft};
   font-size: 18px;
   margin: 10px 0;
@@ -139,67 +136,3 @@ const SubTitle = styled.h4`
     display: none;
   }
 `
-
-function TechStack() {
-  return (
-    <Container id="TechStack">
-      <Box>
-        <Title>Tech Stack</Title>
-        <SubTitle>Most used tools</SubTitle>
-        <Line/>
-      </Box>
-      <SvgsContainer>
-      <SvgBox>
-          <Node width={ 50 } />
-          <SvgName>Node.js</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <ReactSvg width={ 50 } />
-          <SvgName>React</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Redux width={ 50 } />
-          <SvgName>Redux</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Ts width={ 50 } />
-          <SvgName>TypeScript</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Html width={ 50 } />
-          <SvgName>HTML</SvgName>
-        </SvgBox>
-        <SvgBox> 
-          <Css width={ 50 } />
-          <SvgName>Css</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Js width={ 50 } />
-          <SvgName>JavaScript</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Git width={ 50 } />
-          <SvgName>Git</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Express width={ 50 } />
-          <SvgName>Express</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Docker width={ 50 } />
-          <SvgName>Docker</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Sql width={ 50 } />
-          <SvgName>MySQL</SvgName>
-        </SvgBox>
-        <SvgBox>
-          <Jest width={ 50 } />
-          <SvgName>Jest</SvgName>
-        </SvgBox>
-    </SvgsContainer>
-    </Container>
-  )
-}
-
-export default TechStack;

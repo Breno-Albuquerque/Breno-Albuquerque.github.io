@@ -2,13 +2,13 @@ import React from 'react';
 import GlobalStyle from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import {theme} from './Theme';
-import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import About from './components/About/About';
 import styled from 'styled-components';
-import Work from './components/Work';
-import Contact from './components/Contact';
-import TechStack from './components/TechStack';
+import Work from './components/Work/Work';
+import Contact from './components/Contact/Contact';
+import TechStack from './components/TechStack/TechStack';
 
 
 const ContentContainer = styled.div`
@@ -20,7 +20,7 @@ const ContentContainer = styled.div`
   max-width: 992px;
   margin: 0 auto;
 
-  overflow: hidden;
+overflow: hidden;
 `
 
 function App() {
