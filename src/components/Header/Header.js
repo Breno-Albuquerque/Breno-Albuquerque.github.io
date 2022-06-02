@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import Bsymbol from '../../subComponents/Bsymbol';
 import Menu from '../Menu/Menu';
 import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
 
 import {
   Container, MenuBox, MenuLine,
   Nav, NavOl, NavLi, SubContainer
 } from './StyledHeader';
+
+const links = ['Home', 'About', "TechStack", "Work", 'Contact'];
 
 function Header() {
   const [wasClicked, setWasClicked] = useState(false);
@@ -28,54 +28,71 @@ function Header() {
     setIsActive(newState);
   }
 
+  const animateContainer = {
+    animate: {
+      y: 0,
+    },
+    initial: {
+      y: '-10vh'
+    },
+    transition: {
+      duration: 1
+    },
+  }
+
   return (
     <Container
-      animate={{
-        y: 0,
-      }}
-      initial={{
-        y: '-10vh'
-      }}
-      transition={{
-        duration: 1
-      }}
+      variants={ animateContainer }
+      animate="animate"
+      initial="initial"
+      transition="transition"
     >
       <SubContainer>
         <Bsymbol/>
 
-        <MenuBox onClick={ handleMenuClick }>
-          <MenuLine wasClicked={ wasClicked } position={'top'} />
-          <MenuLine wasClicked={ wasClicked } position={'middle'}/>
-          <MenuLine wasClicked={ wasClicked } position={'bottom'}/>
+        <MenuBox
+          onClick={ handleMenuClick }>
+          <MenuLine
+            wasClicked={ wasClicked }
+            position={'top'}
+          />
+          <MenuLine
+            wasClicked={ wasClicked }
+            position={'middle'}
+          />
+          <MenuLine
+            wasClicked={ wasClicked }
+            position={'bottom'}
+          />
         </MenuBox>
 
         <Nav>
-        <NavOl>
-          <NavLi
-
-            n={0} isActive={ isActive }>
-              <Link onSetActive={ () => handleSetActive(0) } onSetInactive={ () => handleSetInactive(0) } activeClass="active" spy={true} smooth={true} offset={-130} duration={500} to="Home">Home</Link>
-            </NavLi>
-            <NavLi
-            n={1} isActive={ isActive }>
-              <Link onSetActive={ () => handleSetActive(1) } onSetInactive={ () => handleSetInactive(1) } activeClass="active" spy={true} smooth={true} offset={-130} duration={500} to="About">About</Link>
-            </NavLi>
-            <NavLi
-             n={2} isActive={ isActive }>
-              <Link onSetActive={ () => handleSetActive(2) } onSetInactive={ () => handleSetInactive(2) } activeClass="active" spy={true} smooth={true} offset={-130} duration={500} to="TechStack">Tech Stack</Link>
-            </NavLi>
-            <NavLi
-             n={3} isActive={ isActive }>
-              <Link onSetActive={ () => handleSetActive(3) } onSetInactive={ () => handleSetInactive(3) }  activeClass="active" spy={true} smooth={true} offset={-130} duration={500} to="Work">Work</Link>
-            </NavLi>
-            <NavLi
-             n={4} isActive={ isActive }>
-              <Link onSetActive={ () => handleSetActive(4) } onSetInactive={ () => handleSetInactive(4) } activeClass="active" spy={true} smooth={true} offset={-130} duration={500} to="Contact">Contact</Link>
-            </NavLi>
+          <NavOl>
+            { links.map((link, index) => {
+              return (
+                <NavLi n={ index } isActive={ isActive } key={index }>
+                  <Link
+                    onSetActive={ () => handleSetActive(index) }
+                    onSetInactive={ () => handleSetInactive(index) }
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-130}
+                    duration={500}
+                    to={ link }
+                  >
+                    { link }
+                  </Link>
+               </NavLi>
+              )
+            }) }
           </NavOl>
         </Nav>
 
-        <Menu handleMenuClick={ handleMenuClick } wasClicked={ wasClicked } />
+        <Menu
+          handleMenuClick={ handleMenuClick }
+          wasClicked={ wasClicked }
+        />
       </SubContainer>
     </Container>
   )
