@@ -144,7 +144,7 @@ function Card(props) {
       <CardTitle>{ name }</CardTitle>
       <CardDescription>{ description }</CardDescription>
       <Line />
-      <Tags>{ techs.map((tech) => <span>{' '}{ tech }</span>) }</Tags>
+      <Tags>{ techs.map((tech, index) => <span key={ index }>{' '}{ tech }</span>) }</Tags>
       <Footer>
         <Anchor href={ link } target="_blank">Visit</Anchor>
         <GithubAnchor href={ repository } target="_blank"> <Github fill={ svgColor } /> </GithubAnchor>

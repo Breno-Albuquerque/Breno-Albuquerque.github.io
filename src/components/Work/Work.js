@@ -16,8 +16,8 @@ function Work() {
         <Line />
       </Box>
       <WorkList>
-        { projects.map((project) => (
-          <Card project={ project } />
+        { projects.map((project, index) => (
+          <Card key={ index } project={ project } />
         )) }
       </WorkList>
     </Container>

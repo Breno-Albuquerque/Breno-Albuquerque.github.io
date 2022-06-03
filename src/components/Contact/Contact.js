@@ -13,8 +13,8 @@ function Contact() {
   return (
     <Container id="Contact">
       <Title>Get In Touch</Title>
-      { contacts.map((data) => (
-        <ContactCard data={ data } theme={ theme } />
+      { contacts.map((data, i) => (
+        <ContactCard key={ i } data={ data } theme={ theme } />
       )) }
       <Footer>Designed & Built by Breno Albuquerque. </Footer>
     </Container>

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {
-  Css, Docker, Git, Html,
-  Jest, Js, Node, ReactSvg,
-  Redux, Sql, Ts, Express
+  Css, Docker, Git, Html, Jest, Js,
+  Node, ReactSvg, Redux, Sql, Ts, Express
 } from '../../images/techstack/AllSvgs';
+
 
 import {
   Container, Box, Title, SubTitle,
@@ -20,8 +20,9 @@ function TechStack() {
         <SubTitle>Most used tools</SubTitle>
         <Line/>
       </Box>
+
       <SvgsContainer>
-      <SvgBox>
+        <SvgBox>
           <Node width={ 50 } />
           <SvgName>Node.js</SvgName>
         </SvgBox>

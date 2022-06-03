@@ -38,8 +38,8 @@ export const Title = styled(motion.h1)`
   color: ${props => props.theme.main};
 
   @media(min-width: 576px) {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 46px;
+    line-height: 54px;
   }
 `
 
@@ -63,8 +63,8 @@ export const Introduction = styled(motion.article)`
   }
 
   @media(min-width: 992px) {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 32px;
   }
 `
 
