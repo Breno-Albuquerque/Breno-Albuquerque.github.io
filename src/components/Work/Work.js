@@ -12,7 +12,7 @@ import {
 function Work() {
 
   const { ref, inView } = useInView({
-    threshold: 0.3
+    threshold: 0.8
   });
 
   const animation = useAnimation();
@@ -51,12 +51,12 @@ function Work() {
 
   return (
     <Container id="Work">
-      <Box variants={ titleVariants } animate={ animation } initial="initial">
+      <Box ref={ ref } variants={ titleVariants } animate={ animation } initial="initial">
         <Line/>
         <Title>My Work</Title>
         <SubTitle>Projects</SubTitle>
       </Box>
-      <WorkList ref={ ref }>
+      <WorkList >
         { projects.map((project, index) => (
           <Card inView={ inView } index={ index } key={ index } project={ project } />
         )) }

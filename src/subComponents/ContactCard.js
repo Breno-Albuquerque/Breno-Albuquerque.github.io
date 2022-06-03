@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Curriculum, Email, Github, Linkedin } from '../images/contact/contactSvgs';
 
-const Container = styled.a`
+const Container = styled(motion.a)`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -49,6 +50,7 @@ const AnchorArrow = styled.a`
 
 function ContactCard(props) {
   const { id, text, icon, link } = props.data;
+  const { inView, index } = props;
   const [svgColor, setSvgColor] = useState(props.theme.text);
 
   function handleMouseOver() {
@@ -59,8 +61,31 @@ function ContactCard(props) {
     setSvgColor(props.theme.text);
   }
 
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start('animate');
+    }
+  }, [inView]);
+
+  const ContainerVar = {
+    initial: {
+      x: -150,
+      opacity: 0
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: index / 2
+      }
+    }
+  }
+
   return (
-    <Container onMouseLeave={ handleMouseLeave } onMouseOver={ handleMouseOver } id={ id } href={ link }
+    <Container variants={ ContainerVar } initial="initial" animate={ animation } onMouseLeave={ handleMouseLeave } onMouseOver={ handleMouseOver } id={ id } href={ link }
     target="_blank" rel="noreferrer">
       { icon === 'email' && <Email fill={ svgColor } /> }
       { icon === 'github' && <Github fill={ svgColor } /> }

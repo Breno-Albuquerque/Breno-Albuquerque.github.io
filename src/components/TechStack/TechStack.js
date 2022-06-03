@@ -84,13 +84,13 @@ function TechStack() {
 
   return (
     <Container id="TechStack">
-      <Box variants={ titleVariants } animate={ animation } initial="initial">
+      <Box ref={ ref } variants={ titleVariants } animate={ animation } initial="initial">
         <Line variants={item} />
         <Title variants={item}>Tech Stack</Title>
         <SubTitle variants={item}>Most used tools</SubTitle>
       </Box>
 
-      <SvgsContainer ref={ ref } variants={ containerVariant } initial="initial" animate={animation}>
+      <SvgsContainer  variants={ containerVariant } initial="initial" animate={animation}>
         <SvgBox variants={ boxVariant }>
           <Node width={ 50 } />
           <SvgName>Node.js</SvgName>

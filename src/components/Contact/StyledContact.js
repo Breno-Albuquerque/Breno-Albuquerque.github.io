@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -11,7 +12,7 @@ export const Container = styled.section`
   min-height: 90vh;
 `
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
   color: ${props => props.theme.main};
   font-size: 24px;
   font-weight: bold;
