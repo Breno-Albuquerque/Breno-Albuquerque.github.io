@@ -10,30 +10,23 @@ function Menu({ wasClicked, handleMenuClick }) {
     <Container wasClicked={ wasClicked } >
       <Nav>
         <List>
-          <Li>
-            <ScrollLink activeClass="active" spy={true} smooth={true} offset={-80} duration={500} to="About" onClick={ handleMenuClick }>
-              <Arrow>chevron_right</Arrow> 
-              About
-            </ScrollLink>
-          </Li>
-          <Li>
-            <ScrollLink activeClass="active" spy={true} smooth={true} offset={-80} duration={500} to="TechStack" onClick={ handleMenuClick }>
-              <Arrow>chevron_right</Arrow> 
-              Tech Stack
-            </ScrollLink>
-          </Li>
-          <Li>
-            <ScrollLink activeClass="active" spy={true} smooth={true} offset={-80} duration={500} to="Work" onClick={ handleMenuClick }>
-              <Arrow>chevron_right</Arrow> 
-              Work
-            </ScrollLink>
-          </Li>
-          <Li>
-            <ScrollLink activeClass="active" spy={true} smooth={true} offset={-80} duration={500} to="Contact" onClick={ handleMenuClick }>
-              <Arrow>chevron_right</Arrow> 
-              Contact
-            </ScrollLink>
-          </Li>
+          { ['About', 'TechStack', 'Work', 'Contact'].map((item, index) => {
+            return (
+              <Li key={ index }>
+              <ScrollLink
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                to={ item }
+                onClick={ handleMenuClick }>
+                <Arrow>chevron_right</Arrow> 
+                { item }
+              </ScrollLink>
+            </Li>
+            )
+          }) }
         </List>
       </Nav>
     </Container>
