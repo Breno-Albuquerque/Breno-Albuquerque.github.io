@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled  from 'styled-components';
 
 export const Container = styled.section`
@@ -17,7 +18,7 @@ export const Container = styled.section`
   }
 `
 
-export const Box = styled.div`
+export const Box = styled(motion.div)`
   width: 100%;
   margin-bottom: 32px;
 
@@ -30,7 +31,7 @@ export const Box = styled.div`
   }
 `
 
-export const Title = styled.h3`
+export const Title = styled(motion.h3)`
   font-size: 22px;
   color: ${props => props.theme.main};
 
@@ -58,7 +59,7 @@ export const Line = styled.span`
   }
 `
 
-export const Text = styled.p`
+export const Text = styled(motion.p)`
   color: ${props => props.theme.text};
   font-size: 16px;
 
@@ -71,7 +72,7 @@ export const Text = styled.p`
   }
 `
 
-export const Picture = styled.img`
+export const Picture = styled(motion.img)`
   width: 202px;
   
   margin: 32px auto;
@@ -81,7 +82,7 @@ export const Highlight = styled.span`
   color: ${props => props.theme.main};
 `
 
-export const SubContainer = styled.div`
+export const SubContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -105,7 +106,7 @@ export const ImgTextBox = styled.div`
   }
 `
 
-export const SubTitle = styled.h4`
+export const SubTitle = styled(motion.h4)`
   color: ${props => props.theme.soft};
   font-size: 18px;
   margin: 10px 0;

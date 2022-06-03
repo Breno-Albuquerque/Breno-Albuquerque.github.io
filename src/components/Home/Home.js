@@ -36,15 +36,18 @@ function Home() {
   const animateButtonsBox = {
     initial: {
       x: '-100vw',
+      opacity: 0,
     },
     animate: {
       x: 0,
+      opacity: 1,
       transition: {
         type: "spring",
         duration: 6,
         damping: 6,
         stiffness: 30,
         delay: 1.7,
+        staggerChildren: 0.5
       }
     },
   }
