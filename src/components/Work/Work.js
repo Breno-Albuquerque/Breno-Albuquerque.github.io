@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Card from '../../subComponents/Card';
 import { projects } from '../../data/projects';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 
 import {
   Container, Box, Title,
@@ -8,16 +10,55 @@ import {
 } from './StyledWork';
 
 function Work() {
+
+  const { ref, inView } = useInView({
+    threshold: 0.3
+  });
+
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start('animate');
+    }
+  }, [inView]);
+
+  const titleVariants = {
+    initial: {
+      scale: 0
+    },
+    animate: {
+      scale:1,
+      transition: {
+        type: 'spring',
+        duration: 0.5,
+      }
+    }
+  }
+
+  const item = {
+    initial: {
+      scale: 0
+    },
+    animate: {
+      scale:1,
+      transition: {
+        type: 'spring',
+        duration: 1,
+      }
+    }
+  }
+
   return (
     <Container id="Work">
-      <Box>
+      <Box variants={ titleVariants } animate={ animation } initial="initial">
+        <Line/>
         <Title>My Work</Title>
         <SubTitle>Projects</SubTitle>
-        <Line />
       </Box>
-      <WorkList>
+      <WorkList ref={ ref }>
         { projects.map((project, index) => (
-          <Card key={ index } project={ project } />
+          <Card inView={ inView } index={ index } key={ index } project={ project } />
         )) }
       </WorkList>
     </Container>

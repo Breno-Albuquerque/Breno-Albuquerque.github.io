@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Container = styled.section`
   font-family: 'Poppins', sans-serif;
@@ -20,12 +21,13 @@ export const Container = styled.section`
   }
 `
 
-export const Box = styled.div`
+export const Box = styled(motion.div)`
   width: 100%;
 
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-direction: row-reverse;
 
   margin-bottom: 32px;
 
@@ -34,7 +36,7 @@ export const Box = styled.div`
   }
 `
 
-export const Title = styled.h3`
+export const Title = styled(motion.h3)`
   font-size: 22px;
   color: ${props => props.theme.main};
 
@@ -45,7 +47,7 @@ export const Title = styled.h3`
   }
 `
 
-export const Line = styled.span`
+export const Line = styled(motion.span)`
   background-color: ${props => props.theme.main};
 
   flex-grow: 0.95;
@@ -77,7 +79,7 @@ export const WorkList = styled.ul`
   }
 `
 
-export const SubTitle = styled.h4`
+export const SubTitle = styled(motion.h4)`
   color: ${props => props.theme.soft};
   font-size: 18px;
   margin: 10px 0;

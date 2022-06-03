@@ -43,7 +43,7 @@ function About() {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1,
+        duration: 0.5,
       }
     }
   }
@@ -69,26 +69,27 @@ function About() {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1.4
+        duration: 1.2
       }
     }
   }
 
   const pictureVariants = {
     initial: {
-      opacity: 0,
+      scale: 0
     },
     animate: {
-      opacity: 1,
+      scale:1,
       transition: {
+        type: 'spring',
         duration: 1,
-        delay: 3
+        delay: 2.5
       }
     }
   }
 
   return (
-    <Container  id="About">
+    <Container id="About">
       <Box ref={ ref } variants={ boxVariants } animate={ animation } initial="initial">
         <Line variants={ item } />
         <Title variants={ item }>About Me</Title>

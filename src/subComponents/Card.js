@@ -1,9 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components';
 import { Github } from '../images/contact/contactSvgs';
 import { ThemeContext } from 'styled-components';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   background: none;
   color: ${props => props.theme.text};
   border: 1px solid ${props => props.theme.main};
@@ -131,6 +133,7 @@ function Card(props) {
   const [svgColor, setSvgColor] = useState(theme.mainL);
 
 
+
   function handleMouseOver() {
     setSvgColor(theme.text);
   }
@@ -139,8 +142,32 @@ function Card(props) {
     setSvgColor(theme.mainL);
   } 
 
+  const { index, inView } = props;
+
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start('animate');
+    }
+  }, [inView]);
+
+  const projectVar = {
+    initial: {
+      scale: 0
+    },
+    animate: {
+      scale:1,
+      transition: {
+        type: 'spring',
+        duration: 1,
+        delay: index / 2
+      }
+    }
+  }
+
   return (
-    <Container onMouseOver={ handleMouseOver } onMouseLeave={ handleMouseLeave } id={ id } > 
+    <Container variants={ projectVar } initial="initial" animate={ animation } onMouseOver={ handleMouseOver } onMouseLeave={ handleMouseLeave } id={ id } > 
       <CardTitle>{ name }</CardTitle>
       <CardDescription>{ description }</CardDescription>
       <Line />

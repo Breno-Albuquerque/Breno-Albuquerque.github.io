@@ -49,7 +49,7 @@ function TechStack() {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1,
+        duration: 0.5,
       }
     }
   }
@@ -60,8 +60,8 @@ function TechStack() {
     },
     animate: {
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 1.5
+        staggerChildren: 0.1,
+        delayChildren: 1.2
       }
     }
   }
