@@ -42,8 +42,8 @@ function Home() {
       transition: {
         type: "spring",
         duration: 6,
-        damping: 8,
-        stiffness: 50,
+        damping: 6,
+        stiffness: 30,
         delay: 1.7,
       }
     },
