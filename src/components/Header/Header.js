@@ -28,28 +28,26 @@ function Header() {
     setIsActive(newState);
   }
 
-  const animateContainer = {
-    animate: {
-      y: 0,
-    },
+  const containerVariants = {
     initial: {
       y: '-10vh'
     },
-    transition: {
-      duration: 1
+    animate: {
+      y: 0,
+      transition: {
+        duration: 1
+      }
     },
   }
 
   return (
     <Container
-      variants={ animateContainer }
+      variants={ containerVariants }
       animate="animate"
       initial="initial"
-      transition="transition"
     >
       <SubContainer>
         <Bsymbol/>
-
         <MenuBox
           onClick={ handleMenuClick }>
           <MenuLine

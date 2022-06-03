@@ -11,7 +11,7 @@ export const Container = styled(motion.header)`
   box-sizing: border-box;
 
   background-color: ${props => props.theme.back};
-  box-shadow: 0px 2px 8px 0px ${props => props.theme.main};
+  /* box-shadow: 0px 2px 8px 0px ${props => props.theme.main}; */
 
   z-index: 9;
 
