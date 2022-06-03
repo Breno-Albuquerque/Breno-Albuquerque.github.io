@@ -17,5 +17,6 @@ export const theme = {
   mainL: '#72FEE4',
   
   backL: '#25283D',
-  backLL: '#2F324C'
+  backLL: '#2F324C',
+  backLLL: '#464B72'
 }

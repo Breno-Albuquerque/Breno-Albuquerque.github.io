@@ -1,10 +1,33 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: ${ props => props.theme.soft } #1d1e2c;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1d1e2c;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: ${ props => props.theme.backLLL };
+    border-radius: 50px;
+    border: none;
+  }
+
   /* http://meyerweb.com/eric/tools/css/reset/ 
-    v2.0 | 20110126
-    License: none (public domain)
-  */
+  v2.0 | 20110126
+  License: none (public domain) */
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
