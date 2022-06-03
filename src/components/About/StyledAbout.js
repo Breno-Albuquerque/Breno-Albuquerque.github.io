@@ -23,6 +23,7 @@ export const Box = styled(motion.div)`
   margin-bottom: 32px;
 
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: flex-start;
 
@@ -36,13 +37,13 @@ export const Title = styled(motion.h3)`
   color: ${props => props.theme.main};
 
   @media(min-width: 992px) {
-    width: 100%;
+    width: 100%;  
     font-size: 32px;
     text-align: center;
   }
 `
 
-export const Line = styled.span`
+export const Line = styled(motion.span)`
   background-color: ${props => props.theme.main};
 
   flex-grow: 0.95;

@@ -14,10 +14,6 @@ function About() {
     threshold: 0.3
   });
 
-  const {ref2, inView2} = useInView({
-    threshold: 0.3
-  })
-
   const animation = useAnimation();
 
   useEffect(() => {
@@ -25,12 +21,6 @@ function About() {
       animation.start('animate');
     }
   }, [inView]);
-
-  useEffect(() => {
-    if (inView2) {
-      animation.start('animate');
-    }
-  }, [inView2]);
 
   const boxVariants = {
     initial: {
@@ -53,7 +43,7 @@ function About() {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1.2,
+        duration: 1,
       }
     }
   }
@@ -64,7 +54,7 @@ function About() {
     },
     animate: {
       transition: {
-        staggerChildren: 0.8,
+        staggerChildren: 0.5,
         delayChildren: 1
       }
     }
@@ -92,7 +82,7 @@ function About() {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 3.5
+        delay: 3
       }
     }
   }
@@ -100,13 +90,13 @@ function About() {
   return (
     <Container  id="About">
       <Box ref={ ref } variants={ boxVariants } animate={ animation } initial="initial">
+        <Line variants={ item } />
         <Title variants={ item }>About Me</Title>
         <SubTitle variants={ item }>Description</SubTitle>
-        <Line/>
       </Box>
       <ImgTextBox>
-        <SubContainer  ref={ ref2 } variants={ subContainerVar } initial="initial" animate={ animation }>   
-          <Text   variants={ textVariants }>
+        <SubContainer variants={ subContainerVar } initial="initial" animate={ animation }>   
+          <Text  variants={ textVariants }>
             <Highlight>Hello!</Highlight> My name is <Highlight>Breno</Highlight> and I enojoy creating different types of applications.
           </Text>
           <Text variants={ textVariants }>
@@ -119,7 +109,6 @@ function About() {
         <Picture
           src={ myPicture3 }
           alt="Profile Picture"
-          ref={ ref2 }
           variants={ pictureVariants }
           initial="initial"
           animate={ animation }
