@@ -1,9 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
-import styled from 'styled-components';
 import { Github } from '../images/contact/contactSvgs';
-import { ThemeContext } from 'styled-components';
+import styled, { ThemeContext, keyframes } from 'styled-components';
 import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const Container = styled(motion.div)`
   background: none;
@@ -44,15 +42,19 @@ const Container = styled(motion.div)`
 `
 
 const Footer = styled.footer`
+  width: 100%;
   display: flex;
+
   justify-content: space-between;
+
   align-items: flex-end;
 `
 
-const Anchor = styled.a`
+const Anchor = styled(motion.a)`
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-self: flex-start;
 
   color: ${props => props.theme.back};
   background: ${props => props.theme.text};
@@ -122,17 +124,40 @@ const Tags = styled.p`
   }
 `
 
-const GithubAnchor = styled.a`
+const rotate = keyframes`
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`
+
+const GithubAnchor = styled(motion.a)`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: flex-end;
+
+  ${Container}:hover {
+    transition: scale(1.1);
+  }
+
+  ${Container}:hover &>:first-child {
+    animation: ${rotate} infinite 3s linear;
+  }
+
+/*   @media(min-width: 992px) {
+    border-radius: 5px;
+    padding: 4px;
+    background-color: ${props => props.theme.back};
+    flex-direction: column-reverse;
+  } */
 `
 
 function Card(props) {
   const { id, name, description, link, techs, repository } = props.project;
   const theme = useContext(ThemeContext);
   const [svgColor, setSvgColor] = useState(theme.mainL);
-
-
 
   function handleMouseOver() {
     setSvgColor(theme.text);
@@ -165,6 +190,9 @@ function Card(props) {
         duration: 1,
         delay,
       }
+    },
+    static: {
+      scale: 1,
     }
   }
 
@@ -174,6 +202,8 @@ function Card(props) {
       onMouseLeave={ handleMouseLeave }
       id={ id }
 
+      whileHover={{scale: 1.1 }}
+      onHoverEnd={ () => animation.start('static') }
       variants={ projectVar }
       initial="hidden"
       animate={ animation }
@@ -183,8 +213,24 @@ function Card(props) {
       <Line />
       <Tags>{ techs.map((tech, index) => <span key={ index }>{' '}{ tech }</span>) }</Tags>
       <Footer>
-        <Anchor href={ link } target="_blank">Visit</Anchor>
-        <GithubAnchor href={ repository } target="_blank"> <Github fill={ svgColor } /> </GithubAnchor>
+        <Anchor
+          href={ link }
+          target="_blank"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          >
+          Visit
+        </Anchor>
+        <GithubAnchor
+          href={ repository }
+          target="_blank"
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.1 }}
+        >
+          <Github
+            fill={ svgColor }
+          />
+        </GithubAnchor>
       </Footer>
     </Container>
   )
