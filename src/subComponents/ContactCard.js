@@ -65,28 +65,43 @@ function ContactCard(props) {
 
   useEffect(() => {
     if (inView) {
-      animation.start('animate');
+      animation.start('show');
     }
   }, [inView]);
 
+  //  Delay for animations
+  const delay = (index + 1) * 0.5
+
   const ContainerVar = {
-    initial: {
+    hidden: {
       x: -150,
       opacity: 0
     },
-    animate: {
+    show: {
       x: 0,
       opacity: 1,
       transition: {
+        type: "spring",
+        damping: 6,
+        stiffness: 30,
         duration: 1,
-        delay: index / 2
+        delay
       }
     }
   }
 
   return (
-    <Container variants={ ContainerVar } initial="initial" animate={ animation } onMouseLeave={ handleMouseLeave } onMouseOver={ handleMouseOver } id={ id } href={ link }
-    target="_blank" rel="noreferrer">
+    <Container
+    id={ id }
+    href={ link }
+    target="_blank" rel="noreferrer"
+
+    variants={ ContainerVar }
+    initial="hidden"
+    animate={ animation }
+    onMouseLeave={ handleMouseLeave }
+    onMouseOver={ handleMouseOver }
+    >
       { icon === 'email' && <Email fill={ svgColor } /> }
       { icon === 'github' && <Github fill={ svgColor } /> }
       { icon === 'linkedin' && <Linkedin fill={ svgColor } /> }
