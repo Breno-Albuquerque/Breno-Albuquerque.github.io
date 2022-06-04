@@ -10,9 +10,8 @@ import {
 } from './StyledWork';
 
 function Work() {
-
   const { ref, inView } = useInView({
-    threshold: 0.8
+    threshold: 1
   });
 
   const animation = useAnimation();

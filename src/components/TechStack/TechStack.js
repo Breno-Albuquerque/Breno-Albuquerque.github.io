@@ -17,7 +17,7 @@ import {
 function TechStack() {
 
   const { ref, inView } = useInView({
-    threshold: 0.3
+    threshold: 1
   });
 
   const animation = useAnimation();
