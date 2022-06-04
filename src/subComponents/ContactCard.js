@@ -87,6 +87,10 @@ function ContactCard(props) {
         duration: 1,
         delay
       }
+    },
+    static: {
+      x: 0,
+      opacity: 1,
     }
   }
 
@@ -101,6 +105,9 @@ function ContactCard(props) {
     animate={ animation }
     onMouseLeave={ handleMouseLeave }
     onMouseOver={ handleMouseOver }
+    whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+    onHoverEnd={ () => animation.start('static') }
+    whileTap={{ scale: 0.9 }}
     >
       { icon === 'email' && <Email fill={ svgColor } /> }
       { icon === 'github' && <Github fill={ svgColor } /> }
