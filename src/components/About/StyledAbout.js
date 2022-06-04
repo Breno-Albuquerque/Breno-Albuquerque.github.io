@@ -13,7 +13,7 @@ export const Container = styled(motion.section)`
   }
 
   @media(min-width: 992px) {
-    min-height: 60vh;
+    min-height: 80vh;
     justify-content: center;
   }
 `

@@ -8,13 +8,13 @@ export const Container = styled.section`
   box-sizing: border-box;
   padding: 16px;
 
-
   @media(min-width: 576px) {
     padding: 32px;
   }
 
   @media(min-width: 992px) {
-    min-height: 60vh;
+    min-height: 80vh;
+    margin-bottom: 64px;
     justify-content: center;
     align-items: center;
   }
