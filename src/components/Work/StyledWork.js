@@ -64,7 +64,7 @@ export const Line = styled(motion.span)`
   }
 `
 
-export const WorkList = styled.ul`
+export const WorkList = styled(motion.ul)`
   display: flex;
   flex-direction: column;
   margin-top: 16px;

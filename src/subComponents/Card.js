@@ -142,32 +142,42 @@ function Card(props) {
     setSvgColor(theme.mainL);
   } 
 
+  // Delays para animações:
   const { index, inView } = props;
+  const delay = (index + 1) * 0.5;
 
   const animation = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      animation.start('animate');
+      animation.start('show');
     }
   }, [inView]);
 
   const projectVar = {
-    initial: {
+    hidden: {
       scale: 0
     },
-    animate: {
+    show: {
       scale:1,
       transition: {
         type: 'spring',
         duration: 1,
-        delay: index / 2
+        delay,
       }
     }
   }
 
   return (
-    <Container variants={ projectVar } initial="initial" animate={ animation } onMouseOver={ handleMouseOver } onMouseLeave={ handleMouseLeave } id={ id } > 
+    <Container
+      onMouseOver={ handleMouseOver }
+      onMouseLeave={ handleMouseLeave }
+      id={ id }
+
+      variants={ projectVar }
+      initial="hidden"
+      animate={ animation }
+    > 
       <CardTitle>{ name }</CardTitle>
       <CardDescription>{ description }</CardDescription>
       <Line />

@@ -11,53 +11,61 @@ import {
 
 function Work() {
   const { ref, inView } = useInView({
-    threshold: 1
+    threshold: 0.3
   });
 
   const animation = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      animation.start('animate');
+      animation.start('show');
     }
   }, [inView]);
 
-  const titleVariants = {
-    initial: {
-      scale: 0
+  const titleBoxVar = {
+    hidden: {
+      opacity: 0,
+      x: -100,
     },
-    animate: {
-      scale:1,
+    show: {
+      opacity: 1,
+      x: 0,
       transition: {
-        type: 'spring',
-        duration: 0.5,
+        duration: 0.5
       }
     }
   }
 
-  const item = {
-    initial: {
-      scale: 0
+  const workListVar = {
+    hidden: {
+
     },
-    animate: {
-      scale:1,
-      transition: {
-        type: 'spring',
-        duration: 1,
+    show: {
+      duration: {
+        delayChildren: 1
       }
     }
   }
 
   return (
     <Container id="Work">
-      <Box ref={ ref } variants={ titleVariants } animate={ animation } initial="initial">
+      <Box ref={ ref } variants={ titleBoxVar } animate={ animation } initial="hidden">
         <Line/>
         <Title>My Work</Title>
         <SubTitle>Projects</SubTitle>
       </Box>
-      <WorkList >
+      <WorkList
+        variants={ workListVar }
+        animate={ animation }
+        initial="hidden"
+      >
         { projects.map((project, index) => (
-          <Card inView={ inView } index={ index } key={ index } project={ project } />
+          <Card
+            inView={ inView }
+            index={ index }
+            key={ index }
+            project={ project }
+          />
         )) }
       </WorkList>
     </Container>
