@@ -54,7 +54,7 @@ const Anchor = styled(motion.a)`
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-self: flex-start;
+  align-self: flex-end;
 
   color: ${props => props.theme.back};
   background: ${props => props.theme.text};
@@ -137,6 +137,9 @@ const GithubAnchor = styled(motion.a)`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  justify-self: flex-end;
+  align-self: flex-end;
+
   color: ${props => props.theme.main};
   text-decoration: none;
   font-size: 14px;
@@ -153,9 +156,8 @@ const GithubAnchor = styled(motion.a)`
   @media(min-width: 992px) {
     height: 60px;
     border-radius: 5px;
-    padding: 4px;
     flex-direction: column-reverse;
-    margin-right: 8px;
+    margin-right: 6px;
 
     &::after {
       content: "Code"
