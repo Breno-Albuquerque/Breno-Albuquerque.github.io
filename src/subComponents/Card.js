@@ -217,7 +217,8 @@ function Card(props) {
     },
     hover: {
       scale: 1.25,
-      rotate: -45
+      rotate: -45,
+      duration: 0.3
     }
   }
 

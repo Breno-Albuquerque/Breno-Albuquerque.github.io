@@ -80,11 +80,16 @@ function Home() {
         <HelloAnchor
           target="_blank"
           href='mailto:brenoralbu@hotmail.com'
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           >
           Say Hello !
         </HelloAnchor>
 
-        <ButtonCurriculum>
+        <ButtonCurriculum
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           Curriculum
         </ButtonCurriculum>
       </ButtonsBox>
