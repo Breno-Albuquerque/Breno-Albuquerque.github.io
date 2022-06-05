@@ -68,7 +68,7 @@ function Header() {
           <NavOl>
             { links.map((link, index) => {
               return (
-                <NavLi n={ index } isActive={ isActive } key={index }>
+                <NavLi whileHover={{ scale: 1.1 }} n={ index } isActive={ isActive } key={index }>
                   <Link
                     onSetActive={ () => handleSetActive(index) }
                     onSetInactive={ () => handleSetInactive(index) }

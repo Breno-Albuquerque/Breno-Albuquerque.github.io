@@ -41,7 +41,7 @@ const Container = styled(motion.div)`
   }
 `
 
-const Footer = styled.footer`
+const Footer = styled(motion.footer)`
   width: 100%;
   display: flex;
 
@@ -129,29 +129,38 @@ const rotate = keyframes`
     transform: rotate(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.1);
   }
 `
 
 const GithubAnchor = styled(motion.a)`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-evenly;
+  color: ${props => props.theme.main};
+  text-decoration: none;
+  font-size: 14px;
 
-  ${Container}:hover {
-    transition: scale(1.1);
+
+  ${Container}:hover &{
+    color: ${props => props.theme.text};
   }
 
-  ${Container}:hover &>:first-child {
-    animation: ${rotate} infinite 3s linear;
-  }
+/*   ${Container}:hover &>:first-child {
+    animation: ${rotate} infinite 5s linear;
+  } */
 
-/*   @media(min-width: 992px) {
+  @media(min-width: 992px) {
+    height: 60px;
     border-radius: 5px;
     padding: 4px;
-    background-color: ${props => props.theme.back};
     flex-direction: column-reverse;
-  } */
+    margin-right: 8px;
+
+    &::after {
+      content: "Code"
+    }
+  }
 `
 
 function Card(props) {
@@ -193,6 +202,20 @@ function Card(props) {
     },
     static: {
       scale: 1,
+    },
+    hover: {
+      scale: 1.1
+    }
+  }
+
+  const hover = {
+    initial: {
+      scale: 1,
+      rotate: 0
+    },
+    hover: {
+      scale: 1.25,
+      rotate: -45
     }
   }
 
@@ -202,8 +225,12 @@ function Card(props) {
       onMouseLeave={ handleMouseLeave }
       id={ id }
 
-      whileHover={{scale: 1.1 }}
-      onHoverEnd={ () => animation.start('static') }
+      whileHover="hover"
+      onHoverStart={ () => animation.start('hover') }
+      onHoverEnd={ () => {
+        animation.start('static')
+        animation.start('initial')
+      }  }
       variants={ projectVar }
       initial="hidden"
       animate={ animation }
@@ -224,7 +251,9 @@ function Card(props) {
         <GithubAnchor
           href={ repository }
           target="_blank"
-          whileHover={{ scale: 1.4 }}
+          variants={ hover }
+          animate={ animation }
+          initial="initial"
           whileTap={{ scale: 1.1 }}
         >
           <Github
