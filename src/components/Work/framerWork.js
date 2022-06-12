@@ -12,7 +12,7 @@ export const titleBoxVar = {
   }
 }
 
-export const workListVar = {
+/* export const workListVar = {
   hidden: {
 
   },
@@ -21,4 +21,4 @@ export const workListVar = {
       delayChildren: 1
     }
   }
-}
+} */

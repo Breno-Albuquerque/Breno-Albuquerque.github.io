@@ -39,11 +39,11 @@ const AnchorBox = styled.div`
   width: 60%;
 `
 
-const AnchorText = styled.a`
+const AnchorText = styled.div`
   font-size: 16px;
 `
 
-const AnchorArrow = styled.a`
+const AnchorArrow = styled.div`
   font-family: "Material Icons";
   font-size: 20px;
 `

@@ -9,7 +9,7 @@ import {
   SubTitle, Line, WorkList
 } from './StyledWork';
 
-import { titleBoxVar, workListVar } from './framerWork';
+import { titleBoxVar } from './framerWork';
 
 function Work() {
   const { ref, inView } = useInView({
@@ -32,8 +32,6 @@ function Work() {
         <SubTitle>Projects</SubTitle>
       </Box>
       <WorkList
-        variants={ workListVar }
-        animate={ animation }
         initial="hidden"
       >
         { projects.map((project, index) => (
