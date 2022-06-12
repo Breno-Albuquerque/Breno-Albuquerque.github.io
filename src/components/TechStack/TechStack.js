@@ -13,6 +13,10 @@ import {
   Line, SvgsContainer, SvgBox, SvgName,
 } from './StyledTechStack';
 
+import {
+  titleBoxVar, containerVariant, boxVariant
+} from './framerTechStack';
+
 
 function TechStack() {
 
@@ -27,48 +31,6 @@ function TechStack() {
       animation.start('show');
     }
   }, [inView]);
-
-  const titleBoxVar = {
-    hidden: {
-      opacity: 0,
-      x: -100,
-    },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
-
-  const containerVariant = {
-    hidden: {
-      
-    },
-    show: {
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.5
-      }
-    }
-  }
-
-  const boxVariant = {
-    hidden: {
-      opacity: 0,
-      x: -50,
-      y: -50,
-    },
-    show: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
 
   return (
     <Container id="TechStack">

@@ -8,13 +8,16 @@ import {
   ImgTextBox, SubContainer, Text, Highlight, Picture
 } from './StyledAbout';
 
+import {
+  titleBoxVar, subContainer,
+  textVar, pictureVar
+} from './framerAbout'
+
 function About() {
 
   const [refTitleBox, titleBoxInView] = useInView({
     threshold: 0.3
   });
-
-  const [refTextContainer, textContainerInView] = useInView();
 
   const [refPicture, pictureInView] = useInView();
 
@@ -24,62 +27,7 @@ function About() {
     if (titleBoxInView) {
       controls.start('show');
     }
-  }, [titleBoxInView, textContainerInView, pictureInView]);
-
-  const titleBoxVar = {
-    hidden: {
-      opacity: 0,
-      x: -100,
-    },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
-
-  const subContainer = {
-    hidden: {
-
-    },
-    show: {
-      transition: {
-        delayChildren: 0.5,
-        staggerChildren: 0.5
-      }
-    }
-  }
-
-  const textVar = {
-    hidden: {
-      opacity: 0,
-      x: -100,
-    },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
-
-  const pictureVar = {
-    hidden: {
-      opacity: 0,
-      x: -50,
-    },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        delay: 2,
-      }
-    }
-  }
+  }, [titleBoxInView, pictureInView]);
 
   return (
     <Container id="About">

@@ -9,6 +9,8 @@ import {
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 
+import { titleVar } from './framerContact';
+
 function Contact() {
   const theme = useContext(ThemeContext);
 
@@ -23,20 +25,6 @@ function Contact() {
       animation.start('show');
     }
   }, [inView]);
-
-  const titleVar = {
-    hidden: {
-      opacity: 0,
-      x: -100,
-    },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
 
   return (
     <Container id="Contact">

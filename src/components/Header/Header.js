@@ -8,6 +8,8 @@ import {
   Nav, NavOl, NavLi, SubContainer
 } from './StyledHeader';
 
+import { containerVariants } from './framerHeader';
+
 const links = ['Home', 'About', "TechStack", "Work", 'Contact'];
 
 function Header() {
@@ -26,18 +28,6 @@ function Header() {
   function handleSetInactive(n) {
     const newState = isActive.map((e, i) => i === n ? false : e);
     setIsActive(newState);
-  }
-
-  const containerVariants = {
-    initial: {
-      y: '-10vh'
-    },
-    animate: {
-      y: 0,
-      transition: {
-        duration: 1
-      }
-    },
   }
 
   return (
