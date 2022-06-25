@@ -51,7 +51,7 @@ function About() {
             <Highlight>Hello!</Highlight> My name is <Highlight>Breno</Highlight> and I enojoy creating different types of applications.
           </Text>
           <Text variants={ textVar }>
-            I'm always interested in new technologies with distinct tools and resorces that can increase the <Highlight>quality</Highlight> and the <Highlight>speed</Highlight> of my <Highlight>programming</Highlight> and <Highlight>developing skills.</Highlight>
+            I'm always interested in new technologies with distinct tools and resorces that can help me <Highlight>improve</Highlight> my <Highlight>programming</Highlight> and <Highlight>developing skills.</Highlight>
           </Text>
           <Text variants={ textVar }>
             I'm currently a <Highlight>full stack developer student</Highlight> at <Highlight>Trybe</Highlight>, I have already conclued the Front-End module of the course and my specialization is building web pages with JavaScript, HTML, CSS, React and Redux.

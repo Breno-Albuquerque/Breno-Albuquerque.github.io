@@ -1,10 +1,10 @@
 export const projects = [
   {
     id: 1,
-    name: "Store Manager",
-    description: "A Node.js with Express Back-end API to manager a MySQL store database and a React Front-end to display it.",
-    link: "#",
-    techs: ['#FullStack', '#Node.js', '#Express', '#React', '#MySQL', '#Tests'],
+    name: "Store Manager API",
+    description: "A Node.js with Express Back-end API to manager a MySQL store database.",
+    link: "https://github.com/breno-albuquerque/store-manager-back-end",
+    techs: ['#Node.js', '#Express', '#React', '#MySQL', '#Tests'],
     repository: '#'
   },
   {
@@ -25,26 +25,26 @@ export const projects = [
   },
   {
     id: 4,
-    name: "Talker Manager",
-    description: "A trivia game with 5 random questions, timer, score, and ranking exibihtion",
-    link: "https://trivia-game-b.vercel.app",
-    techs: ['#React', '#Redux', '#Css'],
+    name: "Tech Store",
+    description: "A virtual store where you can register, add and remove products from your cart",
+    link: "",
+    techs: ['#Flask', '#Python', '#sqlite', '#bootstrap', '#docker'],
     repository: 'https://github.com/breno-albuquerque/trivia-game'
   },
   {
     id: 5,
-    name: "Talker Manager",
-    description: "A trivia game with 5 random questions, timer, score, and ranking exibihtion",
-    link: "https://trivia-game-b.vercel.app",
-    techs: ['#React', '#Redux', '#Css'],
-    repository: 'https://github.com/breno-albuquerque/trivia-game'
+    name: "Blog API Back-end",
+    description: "A React Front-end to display the Store Manager API",
+    link: "",
+    techs: ['#React', '#styled-components'],
+    repository: 'https://github.com/breno-albuquerque/blogs-api-back-end'
   },
   {
     id: 6,
-    name: "Talker Manager",
-    description: "A trivia game with 5 random questions, timer, score, and ranking exibihtion",
-    link: "https://trivia-game-b.vercel.app",
-    techs: ['#React', '#Redux', '#Css'],
-    repository: 'https://github.com/breno-albuquerque/trivia-game'
+    name: "Blog API Back-end",
+    description: "A Node.js/Express API to manager a blog page with users and posts.",
+    link: "",
+    techs: ["Node.js", "Express", "Sequelize", "MySQL"],
+    repository: 'https://github.com/breno-albuquerque/blog-api-front-end'
   },
 ]
