@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     id: 6,
-    name: "Blog API Back-end",
+    name: "Blog API Front-end",
     description: "A Node.js/Express API to manager a blog page with users and posts.",
     link: "",
     techs: ["Node.js", "Express", "Sequelize", "MySQL"],
