@@ -20,6 +20,8 @@ const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid ${props => props.theme.backLL};
+    background: ${props => props.theme.backLL};
 
   @media(min-width: 992px) {
     min-height: 381px;
@@ -27,9 +29,8 @@ const Container = styled(motion.div)`
     /* margin-right: 64px; */
     margin-bottom: 64px;
 
-    color: ${props => props.theme.mainL};
-    border: 1px solid ${props => props.theme.backLL};
-    background: ${props => props.theme.backLL};
+    //color: ${props => props.theme.mainL};
+
 
     transition: all 0.1s;
 
@@ -71,7 +72,7 @@ const Anchor = styled(motion.a)`
   transition: all 0.1s;
 
   @media(min-width: 992px) {
-    color: ${props => props.theme.mainL};
+    color: ${props => props.theme.text};
     background: ${props => props.theme.back};
 
     ${Container}:hover &{
@@ -101,13 +102,13 @@ const CardDescription = styled.p`
 `
 
 const Line = styled.span`
-  background-color: ${props => props.theme.text};
+  background-color: ${props => props.theme.back};
 
   width: 90%;
-  height: 1px;
+  height: 2px;
 
   @media(min-width: 992px) {
-    background-color: ${props => props.theme.alt1};
+    //background-color: ${props => props.theme.alt1};
 
     ${Container}:hover &{
       background-color: ${props => props.theme.text};
@@ -140,7 +141,7 @@ const GithubAnchor = styled(motion.a)`
   justify-self: flex-end;
   align-self: flex-end;
 
-  color: ${props => props.theme.main};
+  color: ${props => props.theme.text};
   text-decoration: none;
   font-size: 14px;
 
@@ -171,11 +172,11 @@ function Card(props) {
   const [svgColor, setSvgColor] = useState(theme.mainL);
 
   function handleMouseOver() {
-    setSvgColor(theme.text);
+    //setSvgColor(theme.text);
   }
 
   function handleMouseLeave() {
-    setSvgColor(theme.mainL);
+    //setSvgColor(theme.mainL);
   } 
 
   // Delays para animações:
@@ -185,6 +186,7 @@ function Card(props) {
   const animation = useAnimation();
 
   useEffect(() => {
+    setSvgColor(theme.text);
     if (inView) {
       animation.start('show');
     }

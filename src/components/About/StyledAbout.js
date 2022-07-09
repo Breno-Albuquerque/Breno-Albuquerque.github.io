@@ -64,6 +64,7 @@ export const Line = styled(motion.span)`
 export const Text = styled(motion.p)`
   color: ${props => props.theme.text};
   font-size: 16px;
+  text-align: justify;
 
   margin-bottom: 32px;
   line-height: 24px;

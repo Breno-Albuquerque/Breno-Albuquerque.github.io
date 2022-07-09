@@ -108,16 +108,16 @@ export const SvgBox = styled(motion.div)`
 
   transition: all ease 0.2s;
 
-  border: 1px solid ${props => props.theme.main};
+  //  border: 1px solid ${props => props.theme.main};
 
   @media(min-width: 768px) {
     margin-right: 32px;
   }
 
-  @media(min-width: 992px) {
-    background-color: ${props => props.theme.backL};
-    border: 1px solid ${props => props.theme.back};
+  background-color: ${props => props.theme.backL};
+  border: 1px solid ${props => props.theme.back};
 
+  @media(min-width: 992px) {
     &:hover{
       background-color: ${props => props.theme.back};
       border: 1px solid ${props => props.theme.main};
