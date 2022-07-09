@@ -10,10 +10,10 @@ import {
 
 import { containerVariants } from './framerHeader';
 
-const links = ['Home', 'About', "TechStack", "Work", 'Contact'];
+const links = ['Home', 'About', "Tech Stack", "Work", 'Contact'];
 
-function Header() {
-  const [wasClicked, setWasClicked] = useState(false);
+function Header({setWasClicked, wasClicked}) {
+
   const [isActive, setIsActive] = useState([false, false, false, false, false]);
 
   function handleMenuClick() {
@@ -67,7 +67,7 @@ function Header() {
                     smooth={true}
                     offset={-130}
                     duration={500}
-                    to={ link }
+                    to={ link === 'Tech Stack' ? 'TechStack' : link }
                   >
                     { link }
                   </Link>

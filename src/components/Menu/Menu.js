@@ -10,7 +10,7 @@ function Menu({ wasClicked, handleMenuClick }) {
     <Container wasClicked={ wasClicked } >
       <Nav>
         <List>
-          { ['About', 'TechStack', 'Work', 'Contact'].map((item, index) => {
+          { ['Home', 'About', 'Tech Stack', 'Work', 'Contact'].map((item, index) => {
             return (
               <Li key={ index }>
               <ScrollLink
@@ -19,7 +19,7 @@ function Menu({ wasClicked, handleMenuClick }) {
                 smooth={true}
                 offset={-80}
                 duration={500}
-                to={ item }
+                to={ item === 'Tech Stack' ? 'TechStack' : item }
                 onClick={ handleMenuClick }>
                 <Arrow>chevron_right</Arrow> 
                 { item }

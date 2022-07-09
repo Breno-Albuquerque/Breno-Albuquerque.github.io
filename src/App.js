@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GlobalStyle from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import {theme} from './Theme';
@@ -13,6 +13,7 @@ import TechStack from './components/TechStack/TechStack';
 
 const ContentContainer = styled.div`
   box-sizing: border-box;
+  filter: ${props => props.wasClicked ? 'blur(5px)' : 'none'};
   
   background-color: inherit;
   font-family: 'Poppins', sans-serif;
@@ -24,12 +25,13 @@ const ContentContainer = styled.div`
 `
 
 function App() {
+  const [wasClicked, setWasClicked] = useState(false);
   return (
     <>
       <ThemeProvider theme={theme}>
       <GlobalStyle/>
-          <Header/>
-          <ContentContainer>
+          <Header wasClicked={wasClicked} setWasClicked={setWasClicked}/>
+          <ContentContainer wasClicked={wasClicked}>
             <Home />
             <About />
             <TechStack />
