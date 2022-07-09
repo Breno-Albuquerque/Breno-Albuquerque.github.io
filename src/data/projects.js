@@ -12,7 +12,7 @@ export const projects = [
     name: "Store Manager",
     description: "Node.js/Express API with React Front-end - An app to manage product inventory and sales record",
     link: "https://store-manager-app.netlify.app",
-    techs: ['#Node.js', '#Express', '#React', '#SQL', '#Tests'],
+    techs: ['#Node.js', '#Express', '#React', '#Sql', '#Tests'],
     repository: 'https://github.com/breno-albuquerque/store-manager'
   },
   {
@@ -20,7 +20,7 @@ export const projects = [
     name: "TrybeSmith",
     description: "A Typescript Node Express API with MySQL database",
     link: null,
-    techs: ["#Typescript", "#Node.js", "#Express", "MySQL"],
+    techs: ["#Typescript", "#Node.js", "#Express", "#Sql"],
     repository: 'https://github.com/breno-albuquerque/trybe-smith'
   },
   {
@@ -28,7 +28,7 @@ export const projects = [
     name: "Tech Store",
     description: "Flask Python Virtual Store - create account, log in, search products, add and remove products from cart.",
     link: null,
-    techs: ['#Flask', '#Python', '#sqlite', '#bootstrap'],
+    techs: ['#Flask', '#Python', '#sqlite'],
     repository: 'https://github.com/breno-albuquerque/tech-store'
   },
   {
