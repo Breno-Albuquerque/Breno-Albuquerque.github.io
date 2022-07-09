@@ -249,7 +249,7 @@ function Card(props) {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.9 }}
           >
-          Visit
+          { link ? 'Visit' : 'No Deploy' }
         </Anchor>
         <GithubAnchor
           href={ repository }

@@ -19,7 +19,7 @@ export const projects = [
     id: 3,
     name: "TrybeSmith",
     description: "A Typescript Node Express API with MySQL database",
-    link: "",
+    link: null,
     techs: ["#Typescript", "#Node.js", "#Express", "MySQL"],
     repository: 'https://github.com/breno-albuquerque/trybe-smith'
   },
