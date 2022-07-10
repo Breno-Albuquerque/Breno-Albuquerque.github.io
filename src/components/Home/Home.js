@@ -1,8 +1,9 @@
 import React from 'react';
+import curriculo from '../../data/curriculo.pdf'
 
 import {
   Section, Container, Title, Introduction, Name, Test,
-  Highlight, ButtonCurriculum, ButtonsBox, HelloAnchor
+  Highlight, ButtonAnchor, ButtonsBox, HelloAnchor
 } from './StyledHome';
 
 import {
@@ -44,12 +45,14 @@ function Home() {
           Say Hello !
         </HelloAnchor>
 
-        <ButtonCurriculum
+        <ButtonAnchor
+          download="Breno-Albuquerque-CV"
+          href={curriculo}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           Curriculum
-        </ButtonCurriculum>
+        </ButtonAnchor>
       </ButtonsBox>
     </Section>
   )

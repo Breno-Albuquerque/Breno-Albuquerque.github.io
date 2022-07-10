@@ -115,9 +115,13 @@ export const HelloAnchor = styled(motion.a)`
   }
 `
 
-export const ButtonCurriculum = styled(motion.button)`
+export const ButtonAnchor = styled(motion.a)`
   width: 144px;
   height: 48px;
+
+  display: grid;
+  place-items: center;
+  text-decoration: none;
 
   font-size: 16px;
   font-weight: 900;

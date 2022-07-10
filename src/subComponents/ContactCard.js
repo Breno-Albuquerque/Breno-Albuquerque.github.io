@@ -2,6 +2,7 @@ import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Curriculum, Email, Github, Linkedin } from '../images/contact/contactSvgs';
+import curriculo from '../data/curriculo.pdf';
 
 const Container = styled(motion.a)`
   display: flex;
@@ -49,7 +50,7 @@ const AnchorArrow = styled.div`
 `
 
 function ContactCard(props) {
-  const { id, text, icon, link } = props.data;
+  const { id, text, icon, link, download } = props.data;
   const { inView, index } = props;
   const [svgColor, setSvgColor] = useState(props.theme.text);
 
@@ -96,18 +97,19 @@ function ContactCard(props) {
 
   return (
     <Container
-    id={ id }
-    href={ link }
-    target="_blank" rel="noreferrer"
+      id={ id }
+      href={ link === "CV" ? curriculo : link }
+      target="_blank" rel="noreferrer"
+      download={ download }
 
-    variants={ ContainerVar }
-    initial="hidden"
-    animate={ animation }
-    onMouseLeave={ handleMouseLeave }
-    onMouseOver={ handleMouseOver }
-    whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-    onHoverEnd={ () => animation.start('static') }
-    whileTap={{ scale: 0.9 }}
+      variants={ ContainerVar }
+      initial="hidden"
+      animate={ animation }
+      onMouseLeave={ handleMouseLeave }
+      onMouseOver={ handleMouseOver }
+      whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+      onHoverEnd={ () => animation.start('static') }
+      whileTap={{ scale: 0.9 }}
     >
       { icon === 'email' && <Email fill={ svgColor } /> }
       { icon === 'github' && <Github fill={ svgColor } /> }

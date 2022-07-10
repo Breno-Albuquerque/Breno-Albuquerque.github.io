@@ -21,6 +21,7 @@ export const contacts = [
     id: 1,
     text: "Download CV",
     icon: 'curriculum',
-    link: "#",
+    link: "CV",
+    download: 'Breno-Albuquerque-CV'
   },
 ]
