@@ -52,7 +52,7 @@ function About() {
           </Text>
           <Text variants={ textVar }>
             Right after having my first contact with <Highlight>programming</Highlight> in 2021, I knew that I would build a career in this area. Since then, I started to dedicate to studing and learning
-            the basicis of <Highlight>computer science</Highlight> and the most used tools in <Highlight>web development</Highlight>. I'm always interested and curious to learn new technologies that can help me <Highlight>improve</Highlight> my <Highlight>developing skills,</Highlight> so I can use it to <Highlight>positivily impact peoples lives</Highlight>.
+            the basics of <Highlight>computer science</Highlight> and the most used tools in <Highlight>web development</Highlight>. I'm always interested and curious to learn new technologies that can help me <Highlight>improve</Highlight> my <Highlight>developing skills,</Highlight> so I can use it to <Highlight>positivily impact peoples lives</Highlight>.
           </Text>
           <Text variants={ textVar }>
             I'm currently a <Highlight>full stack developer student</Highlight> at <Highlight>Trybe</Highlight>, I have already conclued the Front-End module of the course and i'm finishing the Back-End one.
