@@ -1,7 +1,7 @@
-import { DragControls, useAnimation } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
-import myPicture3 from '../../images/myPicture3.png';
+import newPicture from '../../images/newPicture.png';
 
 import {
   Container, Box, Title, SubTitle, Line,
@@ -48,17 +48,18 @@ function About() {
           initial="hidden"
         >   
           <Text  variants={ textVar }>
-            <Highlight>Hello!</Highlight> My name is <Highlight>Breno</Highlight> and I enojoy creating different types of applications.
+            <Highlight>Hello!</Highlight> My name is <Highlight>Breno</Highlight> and i'm a software delopment enthusiast.
           </Text>
           <Text variants={ textVar }>
-            I'm always interested in new technologies with distinct tools and resorces that can help me <Highlight>improve</Highlight> my <Highlight>programming</Highlight> and <Highlight>developing skills.</Highlight>
+            Right after having my first contact with <Highlight>programming</Highlight> in 2021, I knew that I would build a career in this area. Since then, I started to dedicate to studing and learning
+            the basicis of <Highlight>computer science</Highlight> and the most used tools in <Highlight>web development</Highlight>. I'm always interested and curious to learn new technologies that can help me <Highlight>improve</Highlight> my <Highlight>developing skills,</Highlight> so I can use it to <Highlight>positivily impact peoples lives</Highlight>.
           </Text>
           <Text variants={ textVar }>
-            I'm currently a <Highlight>full stack developer student</Highlight> at <Highlight>Trybe</Highlight>, I have already conclued the Front-End module of the course and my specialization is building web pages with JavaScript, HTML, CSS, React and Redux.
+            I'm currently a <Highlight>full stack developer student</Highlight> at <Highlight>Trybe</Highlight>, I have already conclued the Front-End module of the course and i'm finishing the Back-End one.
           </Text>
         </SubContainer>
         <Picture
-          src={ myPicture3 }
+          src={ newPicture }
           alt="Profile Picture"
           ref={ refPicture }
           variants={ pictureVar }

@@ -27,7 +27,7 @@ function Home() {
           animate="animate"
           initial="initial"
         >
-          I'm a <Highlight>Front-End Web Developer</Highlight> specialized in React applications. I'm currently coursing the Back-End module of <Highlight>Trybe</Highlight> to became Full Stack.
+          I'm a <Highlight>Full Stack Web Developer</Highlight> focused on Back-End applications. I'm currently coursing the software delopment school <Highlight>Trybe</Highlight>.
         </Introduction>
       </Container>
 
