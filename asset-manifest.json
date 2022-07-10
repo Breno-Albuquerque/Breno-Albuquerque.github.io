@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.js": "/static/js/main.3caffc3c.js",
+    "main.js": "/static/js/main.613cd79a.js",
     "static/js/787.8d4efb73.chunk.js": "/static/js/787.8d4efb73.chunk.js",
+    "static/media/curriculo.pdf": "/static/media/curriculo.e064462b13c0cd2b264e.pdf",
     "static/media/myPicture3.png": "/static/media/myPicture3.ce7d0fa49e5abd825005.png",
     "index.html": "/index.html",
-    "main.3caffc3c.js.map": "/static/js/main.3caffc3c.js.map",
+    "main.613cd79a.js.map": "/static/js/main.613cd79a.js.map",
     "787.8d4efb73.chunk.js.map": "/static/js/787.8d4efb73.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3caffc3c.js"
+    "static/js/main.613cd79a.js"
   ]
 }
