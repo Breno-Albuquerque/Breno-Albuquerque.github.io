@@ -27,7 +27,7 @@ function Home() {
           animate="animate"
           initial="initial"
         >
-          I'm a <Highlight>Full Stack Web Developer</Highlight> focused on Back-End applications. I'm currently coursing the software delopment school <Highlight>Trybe</Highlight>.
+          I'm a <Highlight>Full Stack Web Developer</Highlight> focused on Back-End applications. I'm currently coursing the software development school <Highlight>Trybe</Highlight>.
         </Introduction>
       </Container>
 
