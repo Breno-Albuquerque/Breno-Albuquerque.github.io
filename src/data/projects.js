@@ -1,6 +1,14 @@
 export const projects = [
   {
     id: 1,
+    name: "XP-Api",
+    description: "A Typescript Node Express API - Simulates a Stock Broker where clients can buy and sell stocks",
+    link: 'https://projeto-xp.herokuapp.com/docs',
+    techs: ["#Typescript", "#Node.js", "#Express", "#Sql"],
+    repository: 'https://github.com/breno-albuquerque/xp-api'
+  },
+  {
+    id: 2,
     name: "Blog App",
     description: "Node.js/Express API with React Front-end - A blog website where user can posts articles",
     link: "https://my-blogs-app.netlify.app",
@@ -8,20 +16,12 @@ export const projects = [
     repository: 'https://github.com/breno-albuquerque/blogs-app'
   },
   {
-    id: 2,
+    id: 3,
     name: "Store Manager",
     description: "Node.js/Express API with React Front-end - An app to manage product inventory and sales record",
     link: "https://store-manager-app.netlify.app",
     techs: ['#Node.js', '#Express', '#React', '#Sql', '#Tests'],
     repository: 'https://github.com/breno-albuquerque/store-manager'
-  },
-  {
-    id: 3,
-    name: "TrybeSmith",
-    description: "A Typescript Node Express API with MySQL database",
-    link: null,
-    techs: ["#Typescript", "#Node.js", "#Express", "#Sql"],
-    repository: 'https://github.com/breno-albuquerque/trybe-smith'
   },
   {
     id: 4,
